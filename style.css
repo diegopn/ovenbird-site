@@ -949,6 +949,9 @@ main :focus-visible {
 .manual-meta b {
   color: var(--ink);
 }
+.manual-meta .manual-meta-author {
+  flex-basis: 100%;
+}
 .manual-layout {
   display: grid;
   grid-template-columns: minmax(180px, 230px) minmax(0, 1fr);
