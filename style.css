@@ -145,18 +145,18 @@ h2 {
 }
 
 .brand-mark {
-  width: 39px;
-  height: 43px;
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
   overflow: hidden;
-  background: var(--soft);
-  border: 1px solid var(--line);
 }
 
 .brand-mark img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 30%;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -637,6 +637,42 @@ h1 {
   gap: 30px;
 }
 
+.creator-row {
+  align-items: center;
+}
+
+.creator-photo {
+  width: 112px;
+  height: 112px;
+  flex: 0 0 112px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.creator-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.creator-copy {
+  flex: 1;
+}
+
+.creator-copy .kicker {
+  margin-bottom: 14px;
+}
+
+.creator-copy > p:not(.kicker) {
+  max-width: 60ch;
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
 .contact h2 {
   margin-bottom: 8px;
 }
@@ -724,7 +760,8 @@ main :focus-visible {
 
   .brand-mark {
     width: 34px;
-    height: 38px;
+    height: 34px;
+    flex-basis: 34px;
   }
 
   .brand-copy strong {
@@ -850,6 +887,12 @@ main :focus-visible {
   .contact-row {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  .creator-photo {
+    width: 88px;
+    height: 88px;
+    flex-basis: 88px;
   }
 
   .site-footer {
