@@ -639,6 +639,7 @@ h1 {
 
 .creator-row {
   align-items: center;
+  column-gap: 52px;
 }
 
 .creator-photo {
@@ -671,6 +672,10 @@ h1 {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.55;
+}
+
+.creator-copy .button {
+  margin-top: 16px;
 }
 
 .contact h2 {
