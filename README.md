@@ -1,7 +1,9 @@
 # Ovenbird site
 
-Site de apresentação do Ovenbird, editor LaTeX nativo para GNOME.
+Site de apresentação do [Ovenbird](https://github.com/diegopn/ovenbird), editor LaTeX nativo para GNOME.
 
-Para publicar: no GitHub, abra **Settings → Pages**, selecione `Deploy from a branch`, branch `main` e pasta `/ (root)`. O site estático não exige build. A URL padrão será `https://diegopn.github.io/ovenbird-site/`.
+## Publicar pelo GitHub Pages
 
-O idioma PT/EN pode ser alternado no cabeçalho. O tema inicial segue o sistema e pode ser alternado entre claro e escuro.
+No repositório `ovenbird-site`, abra **Settings → Pages** e selecione **Deploy from a branch**, branch `main` e pasta `/ (root)`. O site estático não exige build. A URL será `https://diegopn.github.io/ovenbird-site/`.
+
+O idioma PT/EN e o tema claro/escuro podem ser alternados no cabeçalho. Na primeira visita, o tema segue a preferência do sistema.
