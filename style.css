@@ -437,113 +437,41 @@ h1 {
 }
 
 .preview {
-  padding: 0 15px 12px;
-  transform: rotate(1deg);
+  margin: 0;
+  padding-bottom: 10px;
+  overflow: hidden;
+  transform: rotate(.35deg);
   border: 1px solid var(--line);
   background: var(--page);
   box-shadow: 0 20px 60px #14232b12;
 }
 
-.preview-bar {
-  display: flex;
-  height: 38px;
-  align-items: center;
-  gap: 5px;
-  border-bottom: 1px solid var(--line);
+.preview-stage {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1480 / 949;
+  background: var(--page);
 }
 
-.preview-bar i {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--body-accent);
+.preview-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity .9s ease-in-out;
 }
 
-.preview-bar small {
-  margin-inline: auto;
-  color: var(--muted);
-  font-size: 8px;
-}
-
-.mock {
-  display: grid;
-  min-height: 320px;
-  grid-template-columns: 42px 1fr .75fr;
-}
-
-.mock aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 7px;
-  border-right: 1px solid var(--line);
-  background: var(--body-soft);
-}
-
-.mock aside img {
-  width: 24px;
-  margin-bottom: 7px;
-}
-
-.mock aside i {
-  width: 14px;
-  height: 4px;
-  background: var(--line);
-}
-
-.mock article {
-  padding: 24px 18px;
-}
-
-.mock article small,
-.library strong {
-  color: var(--body-accent);
-  font-size: 7px;
-  font-weight: 800;
-}
-
-.mock article b,
-.mock article i,
-.library b {
-  display: block;
-  height: 5px;
-  margin: 10px 0;
-  background: var(--line);
-}
-
-.mock article b {
-  width: 70%;
-  height: 9px;
-  background: var(--muted);
-}
-
-.mock article i:nth-of-type(2) {
-  width: 75%;
-}
-
-.mock article em {
-  display: block;
-  padding: 16px;
-  text-align: center;
-  font-family: var(--serif);
-}
-
-.mock .library {
-  padding: 24px 10px;
-  border: 0;
-  border-left: 1px solid var(--line);
-}
-
-.library strong {
-  color: var(--ink);
+.preview-shot.is-active {
+  opacity: 1;
 }
 
 .preview-caption {
-  padding-top: 8px;
+  padding: 9px 12px 0;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-size: 8px;
+  font-size: 9px;
   text-transform: uppercase;
 }
 
@@ -887,10 +815,6 @@ main :focus-visible {
     width: 100%;
     max-width: 500px;
     margin: auto;
-  }
-
-  .mock {
-    min-height: 270px;
   }
 
   .section {
