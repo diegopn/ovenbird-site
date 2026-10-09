@@ -20,7 +20,7 @@
   --button-text: #ffffff;
   --sans: Montserrat, Arial, sans-serif;
   --serif: Amiri, Georgia, serif;
-  --max: 1240px;
+  --max: 1300px;
 }
 
 :root[data-theme="dark"] {
@@ -771,6 +771,10 @@ main :focus-visible {
     gap: 15px;
   }
 
+  .wrap {
+    width: min(var(--max), calc(100% - 48px));
+  }
+
   .main-nav {
     gap: 15px;
   }
@@ -790,7 +794,7 @@ main :focus-visible {
 
 @media (max-width: 720px) {
   .wrap {
-    width: calc(100% - 40px);
+    width: calc(100% - 32px);
   }
 
   .site-header {
