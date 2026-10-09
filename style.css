@@ -371,13 +371,15 @@ h1 {
   align-items: center;
   gap: 10px;
   padding: 12px 17px;
+  border: 0;
   background: var(--button);
   color: var(--button-text);
   font-size: 13px;
   font-weight: 700;
+  text-decoration: none;
 }
 
-.button:hover {
+.button:hover:not(:disabled) {
   background: var(--body-accent-hover);
   color: var(--button-text);
 }
@@ -385,6 +387,23 @@ h1 {
 .button:disabled {
   cursor: not-allowed;
   opacity: .65;
+}
+
+.download-button {
+  appearance: none;
+  margin-top: 8px;
+  box-shadow: none;
+}
+
+.download-facts {
+  margin-top: 50px;
+}
+
+.download-setup-link {
+  color: var(--body-accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 .plain {
