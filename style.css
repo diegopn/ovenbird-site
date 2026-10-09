@@ -8,9 +8,14 @@
   --copy: #455054;
   --line: #e1e6e9;
   --accent: #f04d29;
+  --body-accent: #557a69;
+  --body-accent-hover: #456252;
+  --body-hero: #f6f8f5;
+  --body-soft: #f0f4ef;
+  --body-line: #d7e1d9;
   --header: rgba(255, 255, 255, .97);
-  --contact: #eaf2f6;
-  --button: #111111;
+  --contact: #e8efe8;
+  --button: var(--body-accent);
   --button-text: #ffffff;
   --sans: Montserrat, Arial, sans-serif;
   --serif: Amiri, Georgia, serif;
@@ -27,9 +32,14 @@
   --copy: #c7ced0;
   --line: #2d383d;
   --accent: #ff7654;
+  --body-accent: #a8bdb0;
+  --body-accent-hover: #bfd1c3;
+  --body-hero: #131916;
+  --body-soft: #1a231d;
+  --body-line: #37473b;
   --header: rgba(16, 20, 22, .97);
-  --contact: #1a2930;
-  --button: #f2f1ec;
+  --contact: #202c24;
+  --button: var(--body-accent);
   --button-text: #101416;
 }
 
@@ -44,9 +54,14 @@
     --copy: #c7ced0;
     --line: #2d383d;
     --accent: #ff7654;
+    --body-accent: #a8bdb0;
+    --body-accent-hover: #bfd1c3;
+    --body-hero: #131916;
+    --body-soft: #1a231d;
+    --body-line: #37473b;
     --header: rgba(16, 20, 22, .97);
-    --contact: #1a2930;
-    --button: #f2f1ec;
+    --contact: #202c24;
+    --button: var(--body-accent);
     --button-text: #101416;
   }
 }
@@ -300,7 +315,7 @@ main {
 }
 
 .hero {
-  background: var(--hero);
+  background: var(--body-hero);
 }
 
 .hero-grid {
@@ -325,7 +340,7 @@ main {
   width: 34px;
   height: 2px;
   margin: 0 10px 4px 0;
-  background: var(--accent);
+  background: var(--body-accent);
   content: "";
 }
 
@@ -360,7 +375,7 @@ h1 {
 }
 
 .button:hover {
-  background: var(--accent);
+  background: var(--body-accent-hover);
   color: #ffffff;
 }
 
@@ -384,7 +399,7 @@ h1 {
   height: 7px;
   margin-right: 8px;
   border-radius: 50%;
-  background: #d88e31;
+  background: var(--body-accent);
 }
 
 .preview {
@@ -407,7 +422,7 @@ h1 {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent);
+  background: var(--body-accent);
 }
 
 .preview-bar small {
@@ -429,7 +444,7 @@ h1 {
   gap: 14px;
   padding: 14px 7px;
   border-right: 1px solid var(--line);
-  background: var(--soft);
+  background: var(--body-soft);
 }
 
 .mock aside img {
@@ -449,7 +464,7 @@ h1 {
 
 .mock article small,
 .library strong {
-  color: var(--accent);
+  color: var(--body-accent);
   font-size: 7px;
   font-weight: 800;
 }
@@ -500,7 +515,7 @@ h1 {
 
 .section {
   padding-block: 110px;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--body-line);
 }
 
 .split {
@@ -511,7 +526,7 @@ h1 {
 
 .kicker {
   margin-bottom: 20px;
-  color: var(--accent);
+  color: var(--body-accent);
 }
 
 .section h2,
@@ -530,12 +545,12 @@ h1 {
   grid-template-columns: 38px 1fr;
   gap: 12px;
   padding: 22px 0;
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid var(--body-line);
 }
 
 .rows article > b,
 .principles article > b {
-  color: var(--accent);
+  color: var(--body-accent);
   font-size: 12px;
 }
 
@@ -553,7 +568,7 @@ h1 {
 }
 
 .soft {
-  background: var(--soft);
+  background: var(--body-soft);
 }
 
 .intro {
@@ -666,6 +681,10 @@ h1 {
 :focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
+}
+
+main :focus-visible {
+  outline-color: var(--body-accent);
 }
 
 @media (max-width: 980px) {
