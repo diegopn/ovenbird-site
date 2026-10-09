@@ -7,7 +7,8 @@
   --muted: #66727a;
   --copy: #455054;
   --line: #e1e6e9;
-  --accent: #f04d29;
+  --accent: var(--body-accent);
+  --accent-contrast: #ffffff;
   --body-accent: #557a69;
   --body-accent-hover: #456252;
   --body-hero: #f6f8f5;
@@ -31,7 +32,8 @@
   --muted: #aeb7ba;
   --copy: #c7ced0;
   --line: #2d383d;
-  --accent: #ff7654;
+  --accent: var(--body-accent);
+  --accent-contrast: #101416;
   --body-accent: #a8bdb0;
   --body-accent-hover: #bfd1c3;
   --body-hero: #131916;
@@ -53,7 +55,8 @@
     --muted: #aeb7ba;
     --copy: #c7ced0;
     --line: #2d383d;
-    --accent: #ff7654;
+    --accent: var(--body-accent);
+    --accent-contrast: #101416;
     --body-accent: #a8bdb0;
     --body-accent-hover: #bfd1c3;
     --body-hero: #131916;
@@ -264,7 +267,7 @@ h2 {
 .language-option:hover,
 .language-option.is-active {
   background: var(--accent);
-  color: #ffffff;
+  color: var(--accent-contrast);
 }
 
 .theme-toggle,
@@ -376,7 +379,7 @@ h1 {
 
 .button:hover {
   background: var(--body-accent-hover);
-  color: #ffffff;
+  color: var(--button-text);
 }
 
 .plain {
