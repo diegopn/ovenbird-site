@@ -1,6 +1,212 @@
-<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Ovenbird, editor LaTeX nativo para GNOME com biblioteca local e Zotero opcional."><meta name="theme-color" content="#fff"><title>Ovenbird — escrita LaTeX no GNOME</title><link rel="icon" href="assets/ovenbird.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css"><script>try{let l=localStorage.getItem('ovenbird-language')||(/^en/i.test(navigator.language||'')?'en':'pt');document.documentElement.lang=l==='en'?'en':'pt-BR';let t=localStorage.getItem('ovenbird-theme');if(t)document.documentElement.dataset.theme=t}catch{}</script></head><body><header class="site-header"><a class="brand" href="#inicio"><img src="assets/ovenbird.svg" alt="" width="42"><span><strong>Ovenbird</strong><small data-i18n="tag">Editor LaTeX para GNOME</small></span></a><nav id="nav"><a href="#recursos" data-i18n="nav1">Recursos</a><a href="#fluxo" data-i18n="nav2">Como funciona</a><a href="#projeto" data-i18n="nav3">Projeto</a></nav><div class="actions"><div class="languages"><button data-language="en">EN</button><button data-language="pt">PT</button></div><button class="theme" data-theme-toggle aria-label="Alternar tema escuro" title="Alternar tema escuro">◐</button><button class="menu" data-menu-toggle aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">☰</button></div></header><main>
-<section class="hero" id="inicio"><div class="wrap hero-grid"><div><p class="eyebrow" data-i18n="eyebrow">ESCRITA CIENTÍFICA · GNOME · LATEX</p><h1 data-i18n="title">Escreva em LaTeX.<br>Fique no fluxo.</h1><h2 data-i18n="sub">Um editor nativo para seus documentos e referências.</h2><p class="lead" data-i18n="lead">Ovenbird reúne edição de documentos LaTeX e uma biblioteca bibliográfica local em um aplicativo feito para o GNOME. Seus arquivos continuam sendo seus: simples, portáteis e sem formato proprietário.</p><a class="button" href="https://github.com/diegopn/ovenbird" data-i18n="cta">Ver no GitHub ↗</a><a class="plain" href="#recursos" data-i18n="more">Conheça os recursos ↓</a><p class="status"><i></i><span data-i18n="status">Protótipo em desenvolvimento</span></p></div><div class="preview" aria-label="Ilustração da interface Ovenbird"><div class="bar"><i></i><i></i><i></i><small>Ovenbird · Escrita</small></div><div class="mock"><aside><img src="assets/ovenbird.svg" alt=""><i></i><i></i><i></i></aside><article><small>LATEX · DOCUMENTO</small><b></b><i></i><i></i><i></i><br><b></b><i></i><i></i><em>E = mc²</em><i></i></article><aside class="library"><strong data-i18n="library">BIBLIOTECA</strong><i></i><b></b><b></b><b></b></aside></div><footer data-i18n="caption">Documentos LaTeX e referências, lado a lado</footer></div></div></section>
-<section class="section" id="recursos"><div class="wrap split"><div><p class="kicker" data-i18n="k1">01 · RECURSOS</p><h2 data-i18n="features">Tudo para escrever, sem tirar seus documentos do lugar</h2></div><div class="rows"><article><b>01</b><div><h3 data-i18n="f1">Dois modos, um documento</h3><p data-i18n="f1p">Alterne entre Código e Visual no mesmo conteúdo LaTeX. O modo Visual ajuda nas tarefas comuns e o código original segue acessível.</p></div></article><article><b>02</b><div><h3 data-i18n="f2">Bibliografia local</h3><p data-i18n="f2p">Cadastre, busque e organize referências localmente. Importe e exporte BibTeX e insira citações no documento.</p></div></article><article><b>03</b><div><h3 data-i18n="f3">Zotero quando você quiser</h3><p data-i18n="f3p">Sincronize manualmente sua biblioteca pessoal do Zotero. A biblioteca local continua disponível sem conta e sem conexão.</p></div></article><article><b>04</b><div><h3 data-i18n="f4">Nativo no GNOME</h3><p data-i18n="f4p">Interface construída com GTK 4 e Libadwaita, pensada para Linux GNOME.</p></div></article></div></div></section>
-<section class="section soft" id="fluxo"><div class="wrap"><div class="split intro"><div><p class="kicker" data-i18n="k2">02 · COMO FUNCIONA</p><h2 data-i18n="flow">Seus arquivos continuam seus</h2></div><p data-i18n="flowp">O Ovenbird trabalha com formatos conhecidos. Abra um documento ou pasta de projeto e continue usando suas ferramentas.</p></div><div class="principles"><article><b>01</b><h3 data-i18n="p1">LaTeX sem conversão</h3><p data-i18n="p1p">Seus documentos são arquivos .tex comuns, sem formato fechado.</p></article><article><b>02</b><h3 data-i18n="p2">Você escolhe a pasta</h3><p data-i18n="p2p">Abra arquivos pelo seletor do desktop. O app não pede acesso irrestrito à sua pasta pessoal.</p></article><article><b>03</b><h3 data-i18n="p3">Local primeiro</h3><p data-i18n="p3p">A biblioteca funciona offline. A conexão ao Zotero é opcional e iniciada por você.</p></article></div></div></section>
-<section class="section" id="projeto"><div class="wrap split"><div><p class="kicker" data-i18n="k3">03 · O PROJETO</p><h2 data-i18n="project">Em construção, com código aberto</h2></div><div><p data-i18n="projectp">O Ovenbird está em estágio inicial. A interface e os recursos ainda evoluem; o aplicativo ainda não está pronto para publicação no Flathub.</p><p data-i18n="projectp2">Acompanhe o desenvolvimento pelo GitHub.</p><a class="button" href="https://github.com/diegopn/ovenbird" data-i18n="github">Acompanhar no GitHub ↗</a><div class="facts"><span><b data-i18n="platform">PLATAFORMA</b>Linux · GNOME</span><span><b data-i18n="stack">TECNOLOGIAS</b>GTK 4 · Libadwaita · GJS</span><span><b data-i18n="release">LANÇAMENTO</b><span data-i18n="soon">Ainda sem data</span></span></div></div></div></section>
-<section class="contact"><div class="wrap contact-row"><div><p class="kicker" data-i18n="k4">OVENBIRD · SOFTWARE LIVRE</p><h2 data-i18n="contact">Escreva com tranquilidade.</h2><p data-i18n="contactp">Um espaço LaTeX que respeita seus arquivos e seu jeito de trabalhar.</p></div><a class="button light" href="https://github.com/diegopn/ovenbird" data-i18n="visit">Visitar o GitHub ↗</a></div></section></main><footer class="wrap site-footer"><a class="brand" href="#inicio"><img src="assets/ovenbird.svg" width="30" alt=""><strong>Ovenbird</strong></a><span data-i18n="foot">Editor LaTeX nativo para GNOME · Projeto em desenvolvimento</span><a href="#inicio" data-i18n="top">Voltar ao início ↑</a></footer><script src="script.js"></script></body></html>
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Ovenbird, editor LaTeX nativo para GNOME com biblioteca local e Zotero opcional.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Ovenbird — escrita LaTeX no GNOME</title>
+  <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/">
+  <link rel="alternate" hreflang="pt-BR" href="https://diegopn.github.io/ovenbird-site/">
+  <link rel="alternate" hreflang="en" href="https://diegopn.github.io/ovenbird-site/en/">
+  <link rel="alternate" hreflang="es" href="https://diegopn.github.io/ovenbird-site/es/">
+  <link rel="alternate" hreflang="x-default" href="https://diegopn.github.io/ovenbird-site/">
+  <link rel="icon" href="assets/images/ovenbird.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    try {
+      const theme = localStorage.getItem("ovenbird-theme");
+      if (theme === "dark" || theme === "light") {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="https://diegopn.github.io/" aria-label="Visitar o site principal de Diego Pereira">
+      <span class="brand-mark"><img src="assets/images/diego-illustration.jpg" alt=""></span>
+      <span class="brand-copy">
+        <strong>Diego Pereira</strong>
+        <small>Engenharia de software · pesquisa</small>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+      <a href="#recursos">Recursos</a>
+      <a href="#fluxo">Como funciona</a>
+      <a href="#projeto">Projeto</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="github-link" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer" aria-label="Repositório do Ovenbird no GitHub">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.4 7.85 10.93.58.1.79-.25.79-.56v-2.16c-3.19.69-3.87-1.35-3.87-1.35-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      </a>
+
+      <div class="language-switcher" role="group" aria-label="Idioma">
+        <a class="language-option is-active" href="./" lang="pt-BR" aria-current="page">PT</a>
+        <a class="language-option" href="en/" lang="en">EN</a>
+        <a class="language-option" href="es/" lang="es">ES</a>
+      </div>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13.1A8.5 8.5 0 0 1 10.9 3.1 8.5 8.5 0 1 0 20.9 13.1Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      </button>
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+        <span class="sr-only">Abrir menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">Escrita científica · GNOME · LaTeX</p>
+          <h1>Escreva em LaTeX.<br>Fique no fluxo.</h1>
+          <h2>Um editor nativo para seus documentos e referências.</h2>
+          <p class="lead">Ovenbird reúne edição de documentos LaTeX e uma biblioteca bibliográfica local em um aplicativo feito para o GNOME. Seus arquivos continuam sendo seus: simples, portáteis e sem formato proprietário.</p>
+          <a class="button" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer">Ver no GitHub ↗</a>
+          <a class="plain" href="#recursos">Conheça os recursos ↓</a>
+          <p class="status"><i></i>Protótipo em desenvolvimento</p>
+        </div>
+
+        <div class="preview" aria-label="Ilustração da interface Ovenbird">
+          <div class="preview-bar"><i></i><i></i><i></i><small>Ovenbird · Escrita</small></div>
+          <div class="mock">
+            <aside aria-hidden="true">
+              <img src="assets/images/ovenbird.svg" alt="">
+              <i></i><i></i><i></i>
+            </aside>
+            <article aria-hidden="true">
+              <small>LATEX · DOCUMENTO</small>
+              <b></b><i></i><i></i><i></i><br>
+              <b></b><i></i><i></i><em>E = mc²</em><i></i>
+            </article>
+            <aside class="library" aria-hidden="true">
+              <strong>Biblioteca</strong>
+              <i></i><b></b><b></b><b></b>
+            </aside>
+          </div>
+          <div class="preview-caption">Documentos LaTeX e referências, lado a lado</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recursos">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">01 · Recursos</p>
+          <h2>Tudo para escrever, sem tirar seus documentos do lugar</h2>
+        </div>
+        <div class="rows">
+          <article>
+            <b>01</b>
+            <div>
+              <h3>Dois modos, um documento</h3>
+              <p>Alterne entre Código e Visual no mesmo conteúdo LaTeX. O modo Visual ajuda nas tarefas comuns e o código original segue acessível.</p>
+            </div>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>Bibliografia local</h3>
+              <p>Cadastre, busque e organize referências localmente. Importe e exporte BibTeX e insira citações no documento.</p>
+            </div>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>Zotero quando você quiser</h3>
+              <p>Sincronize manualmente sua biblioteca pessoal do Zotero. A biblioteca local continua disponível sem conta e sem conexão.</p>
+            </div>
+          </article>
+          <article>
+            <b>04</b>
+            <div>
+              <h3>Nativo no GNOME</h3>
+              <p>Interface construída com GTK 4 e Libadwaita, pensada para Linux GNOME.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="fluxo">
+      <div class="wrap">
+        <div class="split intro">
+          <div>
+            <p class="kicker">02 · Como funciona</p>
+            <h2>Seus arquivos continuam seus</h2>
+          </div>
+          <p>O Ovenbird trabalha com formatos conhecidos. Abra um documento ou pasta de projeto e continue usando suas ferramentas.</p>
+        </div>
+        <div class="principles">
+          <article>
+            <b>01</b>
+            <h3>LaTeX sem conversão</h3>
+            <p>Seus documentos são arquivos .tex comuns, sem formato fechado.</p>
+          </article>
+          <article>
+            <b>02</b>
+            <h3>Você escolhe a pasta</h3>
+            <p>Abra arquivos pelo seletor do desktop. O app não pede acesso irrestrito à sua pasta pessoal.</p>
+          </article>
+          <article>
+            <b>03</b>
+            <h3>Local primeiro</h3>
+            <p>A biblioteca funciona offline. A conexão ao Zotero é opcional e iniciada por você.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projeto">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">03 · O projeto</p>
+          <h2>Em construção, com código aberto</h2>
+        </div>
+        <div>
+          <p>O Ovenbird está em estágio inicial. A interface e os recursos ainda evoluem; o aplicativo ainda não está pronto para publicação no Flathub.</p>
+          <p>Acompanhe o desenvolvimento pelo GitHub.</p>
+          <a class="button" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer">Acompanhar no GitHub ↗</a>
+          <div class="facts">
+            <span><b>Plataforma</b>Linux · GNOME</span>
+            <span><b>Tecnologias</b>GTK 4 · Libadwaita · Rust</span>
+            <span><b>Lançamento</b>Ainda sem data</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <div class="wrap contact-row">
+        <div>
+          <p class="kicker">Ovenbird · Software livre</p>
+          <h2>Escreva com tranquilidade.</h2>
+          <p>Um espaço LaTeX que respeita seus arquivos e seu jeito de trabalhar.</p>
+        </div>
+        <a class="button light" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer">Visitar o GitHub ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap site-footer">
+    <a class="footer-brand" href="https://github.com/diegopn/ovenbird">
+      <img src="assets/images/ovenbird.svg" alt="">
+      Ovenbird
+    </a>
+    <span>Editor LaTeX nativo para GNOME · Projeto em desenvolvimento</span>
+    <a href="#inicio">Voltar ao início ↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

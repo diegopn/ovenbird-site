@@ -1,1 +1,78 @@
-const words={pt:{tag:"Editor LaTeX para GNOME",nav1:"Recursos",nav2:"Como funciona",nav3:"Projeto",eyebrow:"ESCRITA CIENTÍFICA · GNOME · LATEX",title:"Escreva em LaTeX.<br>Fique no fluxo.",sub:"Um editor nativo para seus documentos e referências.",lead:"Ovenbird reúne edição de documentos LaTeX e uma biblioteca bibliográfica local em um aplicativo feito para o GNOME. Seus arquivos continuam sendo seus: simples, portáteis e sem formato proprietário.",cta:"Ver no GitHub ↗",more:"Conheça os recursos ↓",status:"Protótipo em desenvolvimento",library:"BIBLIOTECA",caption:"Documentos LaTeX e referências, lado a lado",k1:"01 · RECURSOS",features:"Tudo para escrever, sem tirar seus documentos do lugar",f1:"Dois modos, um documento",f1p:"Alterne entre Código e Visual no mesmo conteúdo LaTeX. O modo Visual ajuda nas tarefas comuns e o código original segue acessível.",f2:"Bibliografia local",f2p:"Cadastre, busque e organize referências localmente. Importe e exporte BibTeX e insira citações no documento.",f3:"Zotero quando você quiser",f3p:"Sincronize manualmente sua biblioteca pessoal do Zotero. A biblioteca local continua disponível sem conta e sem conexão.",f4:"Nativo no GNOME",f4p:"Interface construída com GTK 4 e Libadwaita, pensada para Linux GNOME.",k2:"02 · COMO FUNCIONA",flow:"Seus arquivos continuam seus",flowp:"O Ovenbird trabalha com formatos conhecidos. Abra um documento ou pasta de projeto e continue usando suas ferramentas.",p1:"LaTeX sem conversão",p1p:"Seus documentos são arquivos .tex comuns, sem formato fechado.",p2:"Você escolhe a pasta",p2p:"Abra arquivos pelo seletor do desktop. O app não pede acesso irrestrito à sua pasta pessoal.",p3:"Local primeiro",p3p:"A biblioteca funciona offline. A conexão ao Zotero é opcional e iniciada por você.",k3:"03 · O PROJETO",project:"Em construção, com código aberto",projectp:"O Ovenbird está em estágio inicial. A interface e os recursos ainda evoluem; o aplicativo ainda não está pronto para publicação no Flathub.",projectp2:"Acompanhe o desenvolvimento pelo GitHub.",github:"Acompanhar no GitHub ↗",platform:"PLATAFORMA",stack:"TECNOLOGIAS",release:"LANÇAMENTO",soon:"Ainda sem data",k4:"OVENBIRD · SOFTWARE LIVRE",contact:"Escreva com tranquilidade.",contactp:"Um espaço LaTeX que respeita seus arquivos e seu jeito de trabalhar.",visit:"Visitar o GitHub ↗",foot:"Editor LaTeX nativo para GNOME · Projeto em desenvolvimento",top:"Voltar ao início ↑",dark:"Alternar tema escuro",light:"Alternar tema claro",open:"Abrir menu",close:"Fechar menu"},en:{tag:"LaTeX editor for GNOME",nav1:"Features",nav2:"How it works",nav3:"Project",eyebrow:"SCIENTIFIC WRITING · GNOME · LATEX",title:"Write in LaTeX.<br>Stay in your flow.",sub:"A native editor for your documents and references.",lead:"Ovenbird brings LaTeX document editing and a local bibliography into one app made for GNOME. Your files remain yours: simple, portable, and free from proprietary formats.",cta:"Visit GitHub ↗",more:"Explore the features ↓",status:"Prototype in development",library:"LIBRARY",caption:"LaTeX documents and references, side by side",k1:"01 · FEATURES",features:"Everything you need to write, with your documents in place",f1:"Two modes, one document",f1p:"Switch between Code and Visual while working on the same LaTeX content. Visual mode helps with common tasks while the original code stays accessible.",f2:"Local bibliography",f2p:"Create, search, and organize references locally. Import and export BibTeX, then add citations to your document.",f3:"Zotero when you want it",f3p:"Manually sync your personal Zotero library. Your local library works without an account or internet connection.",f4:"Native on GNOME",f4p:"Built with GTK 4 and Libadwaita, designed for Linux GNOME.",k2:"02 · HOW IT WORKS",flow:"Your files remain yours",flowp:"Ovenbird works with familiar formats. Open a document or project folder and keep using your tools.",p1:"LaTeX, without conversion",p1p:"Your documents are ordinary .tex files, with no closed format.",p2:"You choose the folder",p2p:"Open files with the desktop chooser. The app does not ask for unrestricted access to your home folder.",p3:"Local first",p3p:"The library works offline. Zotero connection is optional and started by you.",k3:"03 · THE PROJECT",project:"In progress, with open source code",projectp:"Ovenbird is an early-stage project. The interface and features are still evolving; the app is not ready for Flathub yet.",projectp2:"Follow development on GitHub.",github:"Follow on GitHub ↗",platform:"PLATFORM",stack:"TECHNOLOGY",release:"RELEASE",soon:"No date yet",k4:"OVENBIRD · OPEN SOURCE",contact:"Write with peace of mind.",contactp:"A LaTeX workspace that respects your files and the way you work.",visit:"Visit GitHub ↗",foot:"Native LaTeX editor for GNOME · Project in development",top:"Back to top ↑",dark:"Switch to dark theme",light:"Switch to light theme",open:"Open menu",close:"Close menu"}};const root=document.documentElement,nav=document.querySelector('#nav'),menu=document.querySelector('[data-menu-toggle]'),theme=document.querySelector('[data-theme-toggle]');let lang=root.lang==='en'?'en':'pt';function language(l){lang=l;root.lang=l==='en'?'en':'pt-BR';document.querySelectorAll('[data-i18n]').forEach(e=>{if(words[l][e.dataset.i18n])e.innerHTML=words[l][e.dataset.i18n]});document.querySelectorAll('[data-language]').forEach(b=>{b.classList.toggle('active',b.dataset.language===l);b.setAttribute('aria-pressed',String(b.dataset.language===l))});try{localStorage.setItem('ovenbird-language',l)}catch{}document.title=l==='en'?'Ovenbird — LaTeX writing on GNOME':'Ovenbird — escrita LaTeX no GNOME';theme.setAttribute('aria-label',root.dataset.theme==='dark'?words[l].light:words[l].dark)}function setTheme(t,save=true){root.dataset.theme=t;theme.setAttribute('aria-pressed',String(t==='dark'));theme.setAttribute('aria-label',t==='dark'?words[lang].light:words[lang].dark);theme.title=theme.getAttribute('aria-label');document.querySelector('meta[name="theme-color"]').content=t==='dark'?'#101416':'#ffffff';if(save)try{localStorage.setItem('ovenbird-theme',t)}catch{}}document.querySelectorAll('[data-language]').forEach(b=>b.addEventListener('click',()=>language(b.dataset.language)));theme.addEventListener('click',()=>setTheme(root.dataset.theme==='dark'?'light':'dark'));menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?words[lang].close:words[lang].open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false')}));language(lang);setTheme(root.dataset.theme||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'),false);
+const root = document.documentElement;
+const nav = document.querySelector("#main-nav");
+const menuToggle = document.querySelector("[data-menu-toggle]");
+const themeToggle = document.querySelector("[data-theme-toggle]");
+const themeColor = document.querySelector('meta[name="theme-color"]');
+
+const locale = root.lang.toLowerCase().startsWith("pt")
+  ? "pt"
+  : root.lang.toLowerCase().startsWith("es")
+    ? "es"
+    : "en";
+
+const labels = {
+  pt: {
+    dark: "Ativar tema escuro",
+    light: "Ativar tema claro",
+    open: "Abrir menu",
+    close: "Fechar menu",
+  },
+  en: {
+    dark: "Enable dark theme",
+    light: "Enable light theme",
+    open: "Open menu",
+    close: "Close menu",
+  },
+  es: {
+    dark: "Activar tema oscuro",
+    light: "Activar tema claro",
+    open: "Abrir menú",
+    close: "Cerrar menú",
+  },
+}[locale];
+
+function setTheme(theme, save = true) {
+  const dark = theme === "dark";
+  root.dataset.theme = dark ? "dark" : "light";
+  themeToggle.setAttribute("aria-pressed", String(dark));
+  themeToggle.setAttribute("aria-label", dark ? labels.light : labels.dark);
+  themeToggle.title = dark ? labels.light : labels.dark;
+  themeColor.content = dark ? "#101416" : "#ffffff";
+
+  if (save) {
+    try {
+      localStorage.setItem("ovenbird-theme", root.dataset.theme);
+    } catch {}
+  }
+}
+
+function closeMenu() {
+  nav.classList.remove("is-open");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", labels.open);
+}
+
+menuToggle.setAttribute("aria-label", labels.open);
+menuToggle.addEventListener("click", () => {
+  const isOpen = nav.classList.toggle("is-open");
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? labels.close : labels.open);
+});
+
+nav.querySelectorAll("a").forEach((link) => {
+  link.addEventListener("click", closeMenu);
+});
+
+themeToggle.addEventListener("click", () => {
+  setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+});
+
+let savedTheme;
+try {
+  savedTheme = localStorage.getItem("ovenbird-theme");
+} catch {}
+
+setTheme(
+  savedTheme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"),
+  false,
+);
