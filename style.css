@@ -1125,3 +1125,154 @@ main :focus-visible {
     grid-template-columns: 1fr;
   }
 }
+
+/* Responsive screenshot placeholders and print layout for the user manual */
+.manual-shot {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.manual-shot .manual-shot-placeholder {
+  box-sizing: border-box;
+  aspect-ratio: 16 / 10;
+  min-height: 150px;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: clamp(18px, 3vw, 28px);
+}
+.manual-shot .manual-shot-placeholder > * {
+  width: 100%;
+  max-width: 60ch;
+  font-style: normal;
+}
+.manual-shot .manual-shot-label {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+}
+.manual-shot .manual-shot-description {
+  color: var(--copy);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.manual-shot .manual-shot-alt {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.55;
+}
+.manual-shot figcaption {
+  font-size: 11px;
+  line-height: 1.5;
+}
+.manual-citation {
+  padding: 18px 20px;
+  border-left: 3px solid var(--body-accent);
+  background: var(--body-soft);
+}
+.manual-citation-text {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.manual-print-note {
+  margin-top: 28px;
+  color: var(--muted) !important;
+  font-size: 12px !important;
+}
+@media (max-width: 720px) {
+  .manual-shot .manual-shot-placeholder {
+    min-height: 145px;
+    padding: 18px;
+  }
+  .manual-shot .manual-shot-label {
+    font-size: 13px;
+  }
+  .manual-shot .manual-shot-description {
+    font-size: 12px;
+  }
+  .manual-shot .manual-shot-alt {
+    font-size: 10px;
+  }
+}
+@media print {
+  @page {
+    size: A4;
+    margin: 16mm 14mm;
+  }
+  body.manual-page {
+    background: #fff !important;
+    color: #111 !important;
+  }
+  body.manual-page .site-header,
+  body.manual-page .manual-toc,
+  body.manual-page .site-footer,
+  body.manual-page .manual-print-note {
+    display: none !important;
+  }
+  body.manual-page .manual-hero {
+    padding: 0 0 8mm;
+    border: 0;
+    background: #fff !important;
+  }
+  body.manual-page .manual-hero .wrap,
+  body.manual-page .manual-layout {
+    width: 100%;
+    max-width: none;
+  }
+  body.manual-page .manual-hero h1 {
+    margin-top: 0;
+    color: #111;
+    font-size: 30pt;
+  }
+  body.manual-page .manual-intro,
+  body.manual-page .manual-meta,
+  body.manual-page .manual-content p,
+  body.manual-page .manual-content li,
+  body.manual-page .manual-facts dd {
+    color: #222 !important;
+  }
+  body.manual-page .manual-layout {
+    display: block;
+    padding: 0;
+  }
+  body.manual-page .manual-content > section {
+    padding: 0 0 8mm;
+    border-color: #bbb;
+  }
+  body.manual-page .manual-content > section + section {
+    padding-top: 8mm;
+  }
+  body.manual-page .manual-content h2,
+  body.manual-page .manual-content h3 {
+    color: #111;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+  body.manual-page .manual-facts,
+  body.manual-page .manual-facts > div,
+  body.manual-page .manual-suggestion,
+  body.manual-page .manual-citation,
+  body.manual-page .manual-note,
+  body.manual-page .manual-code,
+  body.manual-page .manual-shot-placeholder {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  body.manual-page .manual-shot-placeholder {
+    background: #fff;
+    border-color: #777;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+  body.manual-page .manual-content a:not(.button) {
+    color: #111;
+  }
+  body.manual-page .manual-code {
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+  }
+  body.manual-page p,
+  body.manual-page li {
+    orphans: 3;
+    widows: 3;
+  }
+}
