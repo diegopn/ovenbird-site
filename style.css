@@ -643,9 +643,9 @@ h1 {
 }
 
 .creator-photo {
-  width: 160px;
-  flex: 0 0 160px;
-  align-self: stretch;
+  width: 230px;
+  height: 230px;
+  flex: 0 0 230px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--soft);
