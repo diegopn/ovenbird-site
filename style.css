@@ -1131,6 +1131,12 @@ main :focus-visible {
   .manual-facts {
     grid-template-columns: 1fr;
   }
+  .manual-meta .manual-meta-author {
+    display: block;
+  }
+  .manual-meta .manual-meta-author b {
+    margin-right: 7px;
+  }
   .manual-content p code,
   .manual-content li code {
     overflow-wrap: anywhere;
