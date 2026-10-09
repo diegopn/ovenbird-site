@@ -349,7 +349,7 @@ main {
 
 h1 {
   margin: 20px 0;
-  font-size: clamp(3.7rem, 6vw, 5.7rem);
+  font-size: clamp(3.25rem, 5.35vw, 5.2rem);
   letter-spacing: -.045em;
   line-height: .88;
 }
@@ -440,7 +440,8 @@ h1 {
   margin: 0;
   padding-bottom: 10px;
   overflow: hidden;
-  transform: rotate(.35deg);
+  transform: rotate(.35deg) scale(1.2);
+  transform-origin: right center;
   border: 1px solid var(--line);
   background: var(--page);
   box-shadow: 0 20px 60px #14232b12;
@@ -715,6 +716,15 @@ main :focus-visible {
     gap: 35px;
   }
 
+  .hero h1 {
+    font-size: clamp(2.3rem, 5.35vw, 3.25rem);
+  }
+
+  .preview {
+    transform: rotate(.35deg) scale(1.1);
+    transform-origin: right center;
+  }
+
   .section {
     padding-block: 80px;
   }
@@ -808,13 +818,15 @@ main :focus-visible {
   }
 
   .hero h1 {
-    font-size: clamp(3.4rem, 14vw, 5rem);
+    font-size: clamp(2.3rem, 8vw, 3.4rem);
   }
 
   .preview {
     width: 100%;
     max-width: 500px;
     margin: auto;
+    transform: rotate(.35deg);
+    transform-origin: center center;
   }
 
   .section {
