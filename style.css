@@ -382,6 +382,11 @@ h1 {
   color: var(--button-text);
 }
 
+.button:disabled {
+  cursor: not-allowed;
+  opacity: .65;
+}
+
 .plain {
   margin-left: 22px;
   font-size: 13px;
@@ -628,6 +633,10 @@ h1 {
 .contact {
   padding: 65px 0;
   background: var(--contact);
+}
+
+.contact.creator {
+  background: var(--page);
 }
 
 .contact-row {
