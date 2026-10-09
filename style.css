@@ -1134,6 +1134,10 @@ main :focus-visible {
   .manual-facts {
     grid-template-columns: 1fr;
   }
+  .manual-content p code,
+  .manual-content li code {
+    overflow-wrap: anywhere;
+  }
 }
 
 /* Responsive screenshot placeholders and print layout for the user manual */
