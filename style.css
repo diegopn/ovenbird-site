@@ -601,8 +601,8 @@ h1 {
 }
 
 .facts {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 15px;
   margin-top: 35px;
   padding-top: 18px;
@@ -613,12 +613,12 @@ h1 {
   display: grid;
   gap: 6px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .facts b {
   color: var(--ink);
-  font-size: 9px;
+  font-size: 10px;
   letter-spacing: .1em;
 }
 
@@ -857,14 +857,6 @@ main :focus-visible {
   .site-footer > span {
     order: 3;
     width: 100%;
-  }
-
-  .facts {
-    flex-wrap: wrap;
-  }
-
-  .facts > span {
-    min-width: 28%;
   }
 }
 
