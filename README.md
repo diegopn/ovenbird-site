@@ -2,6 +2,8 @@
 
 Site de apresentação do [Ovenbird](https://github.com/diegopn/ovenbird), editor LaTeX nativo para GNOME.
 
+[Manual do usuário (versão 0.1.0)](https://diegopn.github.io/ovenbird-site/manual/): instalação, projetos, edição LaTeX e biblioteca BibTeX.
+
 ## Idiomas
 
 - Português (Brasil): https://diegopn.github.io/ovenbird-site/
