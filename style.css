@@ -1108,10 +1108,17 @@ main :focus-visible {
   .manual-intro {
     font-size: 15px;
   }
+  .manual-meta .manual-meta-author {
+    display: block;
+  }
   .manual-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 24px;
     padding-block: 40px 70px;
+  }
+  .manual-toc,
+  .manual-content {
+    min-width: 0;
   }
   .manual-toc {
     position: static;
