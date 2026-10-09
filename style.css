@@ -643,9 +643,9 @@ h1 {
 }
 
 .creator-photo {
-  width: 112px;
-  height: 112px;
-  flex: 0 0 112px;
+  width: 160px;
+  height: 160px;
+  flex: 0 0 160px;
   overflow: hidden;
   border: 1px solid var(--line);
   background: var(--soft);
@@ -895,9 +895,9 @@ main :focus-visible {
   }
 
   .creator-photo {
-    width: 88px;
-    height: 88px;
-    flex-basis: 88px;
+    width: 128px;
+    height: 128px;
+    flex-basis: 128px;
   }
 
   .site-footer {
