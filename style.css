@@ -395,8 +395,8 @@ h1 {
   box-shadow: none;
 }
 
-.download-facts {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+.facts.download-facts {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 50px;
 }
 
@@ -656,7 +656,7 @@ h1 {
 }
 
 .contact.creator {
-  background: var(--page);
+  background: var(--body-soft);
 }
 
 .contact-row {
