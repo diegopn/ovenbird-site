@@ -1,0 +1,617 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+  
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <meta name="description" content="Manual de usuario de Ovenbird: instalación, proyectos LaTeX, edición en modo Código y Visual, compilación de PDF y referencias BibTeX.">
+  
+  <meta name="author" content="Diego Pereira do Nascimento">
+  
+  <meta name="dcterms.modified" content="2026-10-21">
+  <meta name="dcterms.issued" content="2026-10-21">
+  
+  <meta name="theme-color" content="#ffffff">
+  
+  <title>Manual de usuario de Ovenbird — Ovenbird</title>
+  
+  <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/es/manual/">
+  <link rel="alternate" hreflang="pt-BR" href="https://diegopn.github.io/ovenbird-site/manual/">
+  <link rel="alternate" hreflang="en" href="https://diegopn.github.io/ovenbird-site/en/manual/">
+  <link rel="alternate" hreflang="es" href="https://diegopn.github.io/ovenbird-site/es/manual/">
+  
+  <link rel="icon" href="../../assets/images/favicon.svg" type="image/svg+xml">
+  
+  <link rel="icon" href="../../assets/images/favicon-512.png" type="image/png" sizes="512x512">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="../../style.css?v=705b05ce54889df5ab3d33460101a3f4aa27ab30">
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Manual de usuario de Ovenbird",
+    "inLanguage": "es",
+    "url": "https://diegopn.github.io/ovenbird-site/manual/",
+    "author": {
+      "@type": "Person",
+      "name": "Diego Pereira do Nascimento",
+      "sameAs": "https://orcid.org/0009-0008-6487-9890"
+    },
+    "datePublished": "2026-10-21",
+    "dateModified": "2026-10-21",
+    "about": {
+      "@type": "SoftwareApplication",
+      "name": "Ovenbird",
+      "softwareVersion": "0.2.0"
+    }
+  }
+  </script>
+  
+  <script>
+    try {
+      const theme = localStorage.getItem("ovenbird-theme");
+      if (theme === "dark" || theme === "light") {
+        document.documentElement.dataset.theme = theme;
+      }
+    } catch {}
+  </script>
+
+</head>
+
+<body class="manual-page">
+  
+  <header class="site-header">
+    
+    <a class="brand" href="../../es/#inicio" aria-label="Volver al inicio de Ovenbird">
+      
+      <span class="brand-mark"><img src="../../assets/images/favicon.svg" alt=""></span>
+      
+      <span class="brand-copy">
+        
+        <strong>Ovenbird</strong>
+        
+        <small>Editor LaTeX y gestor de bibliografías</small>
+      
+      </span>
+    
+    </a>
+
+    
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegación principal">
+      
+      <a href="../../es/#download">Descargar</a>
+      
+      <a href="../../es/#recursos">Funciones</a>
+      
+      <a href="../../es/#flujo">Cómo funciona</a>
+      
+      <a href="./" aria-current="page">Manual de usuario</a>
+    
+    </nav>
+
+    
+
+    <div class="header-actions">
+      
+      <a class="github-link" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer" aria-label="Repositorio de Ovenbird en GitHub">
+        
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.4 7.85 10.93.58.1.79-.25.79-.56v-2.16c-3.19.69-3.87-1.35-3.87-1.35-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+      
+      </a>
+
+      
+
+      <div class="language-switcher" role="group" aria-label="Idioma">
+        
+        <a class="language-option" href="../../manual/" lang="pt-BR">PT</a>
+        
+        <a class="language-option" href="../../en/manual/" lang="en">EN</a>
+        
+        <a class="language-option is-active" href="./" lang="es" aria-current="page">ES</a>
+      
+      </div>
+
+      
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Cambiar el tema">
+        
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13.1A8.5 8.5 0 0 1 10.9 3.1 8.5 8.5 0 1 0 20.9 13.1Z"/></svg>
+        
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
+      
+      </button>
+
+      
+
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">
+        
+        <span></span><span></span><span></span>
+        
+        <span class="sr-only">Abrir menú</span>
+      
+      </button>
+    
+    </div>
+  
+  </header>
+
+  
+
+  <main>
+    
+    <section class="manual-hero" id="inicio">
+      
+      <div class="wrap">
+        
+        <p class="kicker">Manual de usuario · edición 1</p>
+        
+        <h1>Manual de usuario de Ovenbird</h1>
+        
+        <p class="manual-intro">Esta guía explica los principales flujos de trabajo de Ovenbird documentados en la versión 0.2.0: instalar la aplicación, trabajar con proyectos LaTeX, compilar documentos, organizar referencias BibTeX y configurar el inicio de la aplicación.</p>
+        
+        <p class="manual-meta">
+          
+          <span><b>Edición del manual</b>1.ª edición</span>
+          
+          <span><b>Versión de la aplicación</b>0.2.0</span>
+          
+          <span><b>Actualizado</b><time datetime="2026-10-21">21 de octubre de 2026</time></span>
+          <span><b>Publicado por primera vez</b><time datetime="2026-10-21">21 de octubre de 2026</time></span>
+          
+          <span class="manual-meta-author"><b>Autoría del manual</b>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></span>
+        
+        </p>
+      
+      </div>
+    
+    </section>
+
+    
+
+    <div class="wrap manual-layout">
+      
+      <aside class="manual-toc" aria-label="Contenido de este manual">
+        
+        <h2>En esta guía</h2>
+        
+        <ol>
+          
+          <li><a href="#sobre">Qué es Ovenbird</a></li>
+          
+          <li><a href="#instalacao">Requisitos e instalación</a></li>
+          
+          <li><a href="#projeto">Primer inicio y proyectos</a></li>
+          
+          <li><a href="#edicao">Editar y compilar</a></li>
+          
+          <li><a href="#biblioteca">Referencias BibTeX</a></li>
+          
+          <li><a href="#dados">Datos y copias de seguridad</a></li>
+          
+          <li><a href="#solucao">Problemas habituales</a></li>
+          
+          <li><a href="#software-info">Ficha del software</a></li>
+        
+        </ol>
+      
+      </aside>
+
+      
+
+      <article class="manual-content">
+        
+        <section id="sobre">
+          
+          <p class="kicker">01 · Descripción general</p>
+          
+          <h2>Qué es Ovenbird</h2>
+          
+          <p>Ovenbird es una aplicación para Linux con escritorio GNOME que reúne un editor de documentos LaTeX y una biblioteca local de referencias BibTeX. Los archivos del proyecto se mantienen en formatos comunes, como .tex y .bib, y permanecen en la carpeta elegida por quien usa la aplicación.</p>
+          
+          <p>La aplicación ofrece los modos Código (Code) y Visual para editar documentos LaTeX. La biblioteca de referencias es independiente de cada proyecto: puedes añadir referencias, buscarlas y filtrarlas, importar archivos .bib y exportar una copia BibTeX.</p>
+        
+        </section>
+
+        
+
+        <section id="instalacao">
+          
+          <p class="kicker">02 · Instalación</p>
+          
+          <h2>Requisitos e instalación</h2>
+          
+          <ul>
+            
+            <li>El archivo publicado es un paquete Flatpak para Linux x86_64.</li>
+            
+            <li>Es necesario tener Flatpak instalado y configurado. El paquete usa el runtime <code>org.gnome.Platform</code> versión 51. El archivo de instalación no incluye este runtime, por lo que Flatpak quizá tenga que descargarlo de una fuente configurada en el sistema.</li>
+            
+            <li>La versión Flatpak 0.2.0 incluye Tectonic para compilar documentos. La primera compilación puede necesitar descargar archivos de soporte del motor LaTeX.</li>
+          
+          </ul>
+          
+          <p>Si aún no tienes Flatpak configurado, consulta las <a href="https://flatpak.org/setup" target="_blank" rel="noopener noreferrer">instrucciones de configuración de Flatpak</a> para preparar el sistema. La <a href="https://docs.flatpak.org/en/latest/single-file-bundles.html" target="_blank" rel="noopener noreferrer">documentación oficial sobre paquetes Flatpak de archivo único</a> explica cómo instalarlos directamente e indica que este tipo de paquete no incluye sus dependencias.</p>
+          
+          <p class="manual-download"><a class="button" href="https://github.com/diegopn/ovenbird/releases/download/v0.2.0/Ovenbird-0.2.0-x86_64.flatpak">Descargar Ovenbird 0.2.0 para Linux x86_64</a></p>
+          
+          <ol>
+            
+            <li>Descarga el archivo <strong>Ovenbird-0.2.0-x86_64.flatpak</strong>.</li>
+            
+            <li>Si está en la carpeta Descargas, abre una terminal y ejecuta:</li>
+          
+          </ol>
+          
+          <pre class="manual-code"><code>flatpak install --user "$HOME/Descargars/Ovenbird-0.2.0-x86_64.flatpak"</code></pre>
+          
+          <ol start="3">
+            
+            <li>Confirma la instalación cuando se te solicite. Después, abre Ovenbird desde el menú de aplicaciones del sistema.</li>
+          
+          </ol>
+          
+          <p>Si el archivo está en otra carpeta, sustituye la ruta del comando por la ubicación donde lo guardaste. Para iniciar la aplicación desde una terminal después de instalarla, ejecuta <code>flatpak run io.github.diegopn.ovenbird</code>.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/about-v020.png" alt="Ventana Acerca de Ovenbird con la versión 0.2.0 y enlaces del proyecto." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Información de la aplicación después de instalarla.</figcaption>
+          
+          </figure>
+        
+        </section>
+
+        
+
+        <section id="projeto">
+          
+          <p class="kicker">03 · Proyectos</p>
+          
+          <h2>Primer inicio y proyectos</h2>
+          
+          <p>La primera vez que se abre, Ovenbird muestra el editor sin ningún proyecto seleccionado. De forma predeterminada, en los siguientes inicios intenta volver a abrir el último proyecto utilizado. Puedes cambiar este comportamiento en las preferencias.</p>
+          
+          <h3>Crear un proyecto</h3>
+          
+          <ol>
+            
+            <li>Elige <strong>Nuevo proyecto (New project)</strong> en el menú de la aplicación o pulsa <strong>Ctrl+Alt+N</strong>.</li>
+            
+            <li>Selecciona un documento en blanco o una de las plantillas incluidas: ABNT, IEEE, ACM, Elsevier o Springer Nature.</li>
+            
+            <li>Elige la carpeta donde se creará el proyecto, escribe un nombre y confirma con <strong>Crear (Create)</strong>.</li>
+          
+          </ol>
+          
+          <p>La aplicación prepara una carpeta de proyecto con los archivos del punto de partida elegido. Las plantillas ofrecen una estructura inicial; consulta las normas vigentes de la institución o publicación a la que se destina el documento.</p>
+          
+          <h3>Abrir un proyecto o documento</h3>
+          
+          <p>Para abrir una carpeta de proyecto, elige <strong>Abrir proyecto (Open project)</strong> o <strong>Ctrl+Alt+O</strong>. Para abrir un solo archivo, elige <strong>Abrir documento (Open document)</strong> o pulsa <strong>Ctrl+O</strong>.</p>
+          
+          <h3>Preferencias de inicio</h3>
+          
+          <p>Abre el menú principal de la aplicación y elige <strong>Preferencias (Preferences)</strong> . En <strong>Abrir al iniciar</strong>, elige entre el editor LaTeX y la biblioteca de referencias. La opción <strong>Volver a abrir el último proyecto al iniciar</strong> está activada de forma predeterminada; desactívala si prefieres empezar sin restaurar el proyecto anterior.</p>
+          
+          <p>Las preferencias también permiten elegir el tema <strong>Automático</strong>, <strong>Claro</strong> o <strong>Oscuro</strong> y definir la carpeta inicial de los diálogos de archivos. De forma predeterminada, empiezan en Descargas. Usa <strong>Elegir carpeta</strong> para seleccionar otra carpeta, o <strong>Restablecer</strong> para volver al valor predeterminado.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/new-project.webp" alt="Ventana Nuevo proyecto con una opción en blanco y plantillas ABNT, IEEE, ACM, Elsevier y Springer Nature." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Selección del punto de partida de un proyecto.</figcaption>
+          
+          </figure>
+        
+        </section>
+
+        
+
+        <section id="edicao">
+          
+          <p class="kicker">04 · Edición</p>
+          
+          <h2>Edita y compila tu documento</h2>
+          
+          <p>Abre un archivo <code>.tex</code> o <code>.bib</code> desde la lista de archivos del proyecto. Pulsa <strong>Ctrl+S</strong> para guardar y <strong>Ctrl+F</strong> para buscar texto en el archivo abierto.</p>
+          
+          <h3>Archivos .tex: modos Code y Visual</h3>
+          
+          <p>El modo <strong>Código (Code)</strong> edita el código fuente LaTeX; el modo <strong>Visual</strong> permite editar el mismo documento con formato. Para abrir el modo Visual, el archivo debe contener <code>\begin{document}</code> y <code>\end{document}</code>. El modo Visual admite un subconjunto de los comandos y entornos LaTeX implementados por la aplicación.</p>
+          
+          <p>Si una parte no aparece en el modo Visual, vuelve al modo Código para revisar y editar el código fuente. El modo Código también permite trabajar directamente con comandos LaTeX que no tienen representación visual.</p>
+          
+          <p>La barra del editor LaTeX ofrece deshacer y rehacer, estilos de párrafo, negrita, cursiva, subrayado, monoespaciado e inserción de enlaces. Los menús incluyen matemáticas, símbolos, listas y sangría, además de citas. En <strong>Más opciones</strong>, puedes insertar una imagen o una tabla, un comentario LaTeX, una nota al pie, una nota de revisión, una etiqueta o una referencia cruzada.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/editor-options.webp" alt="Menú Más opciones del editor LaTeX desplegado, con acciones para insertar una imagen, una tabla, un comentario LaTeX, una nota al pie, una nota de revisión, una etiqueta y una referencia cruzada." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Herramientas disponibles en el menú Más opciones del editor.</figcaption>
+          
+          </figure>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/code-editor.png" alt="Editor de Ovenbird en modo Código, con los archivos del proyecto a la izquierda y un documento LaTeX abierto." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Edición del código fuente LaTeX en el modo Código (Code).</figcaption>
+          
+          </figure>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/visual-editor.png" alt="Editor de Ovenbird en modo Visual, que muestra el contenido con formato del documento LaTeX." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Edición visual del mismo documento LaTeX.</figcaption>
+          
+          </figure>
+          
+          <h3>Archivos .bib: edición BibTeX</h3>
+          
+          <p>Un archivo <code>.bib</code> del proyecto se edita directamente como texto BibTeX; no ofrece el modo Visual. Con un archivo <code>.bib</code> abierto, la acción <strong>Añadir referencia bibliográfica (Add bibliographic reference)</strong> permite buscar en la biblioteca local e insertar la entrada elegida en el archivo abierto. Así puedes mantener en el proyecto las entradas que utiliza el documento LaTeX.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/bib-entry-picker.webp" alt="Editor con un archivo BibTeX abierto y la ventana Añadir referencia bibliográfica, con búsqueda y entradas de la biblioteca local." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Elige una entrada de la biblioteca local para insertarla en el archivo .bib abierto.</figcaption>
+          
+          </figure>
+          
+          <h3>Compilar y ver el PDF</h3>
+          
+          <p>Pulsa <strong>Compilar (Compile)</strong> o usa el atajo <strong>Ctrl+Shift+R</strong>. Ovenbird busca <code>latexmk</code>, <code>pdflatex</code> o Tectonic; la versión Flatpak 0.2.0 incluye Tectonic. Cuando la compilación termina correctamente, el PDF aparece en el área de vista previa. Consulta el estado de compilación para identificar mensajes de error.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/compiled-pdf.webp" alt="Editor de Ovenbird con un archivo BibTeX del proyecto abierto a la izquierda y la vista previa del PDF compilado a la derecha." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Archivo BibTeX del proyecto y PDF compilado en el área de vista previa.</figcaption>
+          
+          </figure>
+        
+        </section>
+
+        
+
+        <section id="biblioteca">
+          
+          <p class="kicker">05 · Referencias</p>
+          
+          <h2>Organiza la biblioteca BibTeX</h2>
+          
+          <p>Abre <strong>Referencias (References)</strong> en la barra lateral para acceder a la biblioteca local. Busca los registros y filtra por autor, año, etiqueta o tipo. También puedes ordenarlos por título, autor, año o etiqueta, en orden ascendente o descendente.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/reference-library.png" alt="Biblioteca local de Ovenbird con una lista de referencias, búsqueda, filtros y botón para añadir referencias." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Búsqueda, filtros y lista de la biblioteca local.</figcaption>
+          
+          </figure>
+          
+          <h3>Añadir y mantener referencias</h3>
+          
+          <p>Pulsa <strong>Añadir referencia (Add reference)</strong> para elegir el tipo de registro e introducir la clave de cita, el título, los autores y la fecha. Los campos varían según el tipo; por ejemplo, el formulario de un artículo de revista también incluye revista, volumen, número o edición, páginas, mes, DOI, URL y nota. Después de guardar, puedes editar o eliminar los registros desde la lista.</p>
+          
+          <p>Las referencias pueden tener etiquetas. Al crear o editar un registro, selecciona etiquetas existentes o crea otras; después, usa el filtro de etiquetas de la lista para encontrar los registros correspondientes.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/add-reference.webp" alt="Formulario Nueva referencia con el tipo, la clave de cita, el título, los autores y los campos bibliográficos de un artículo." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Formulario de referencia; los campos disponibles dependen del tipo elegido.</figcaption>
+          
+          </figure>
+          
+          <h3>Importar, exportar e insertar citas</h3>
+          
+          <ul>
+            
+            <li><strong>Importar BibTeX (Import BibTeX):</strong> selecciona un archivo <code>.bib</code>; las referencias importadas pasan a formar parte de la biblioteca local.</li>
+            
+            <li><strong>Exportar BibTeX (Export BibTeX):</strong> guarda una copia <code>.bib</code> de las referencias de la biblioteca.</li>
+            
+            <li><strong>Insertar cita (Insert citation):</strong> en un documento LaTeX guardado, usa la acción o pulsa <strong>Ctrl+Shift+C</strong> para buscar en la biblioteca. <strong>Cita</strong> inserta la clave BibTeX en el documento; <strong>Referencia bibliográfica</strong> inserta una referencia con formato.</li>
+          
+          </ul>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/bibtex-import-export.webp" alt="Menú de la biblioteca local de Ovenbird con las acciones Importar BibTeX y Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Importación y exportación de la biblioteca local.</figcaption>
+          
+          </figure>
+          
+          <p>La biblioteca local es independiente de los archivos de cada proyecto. Para que una cita por clave se encuentre al compilar, la entrada correspondiente debe estar en un archivo <code>.bib</code> del proyecto declarado en el documento principal mediante <code>\bibliography{...}</code> o <code>\addbibresource{...}</code>. La biblioteca local no se incluye automáticamente al compilar. En un archivo <code>.bib</code> del proyecto abierto en el editor, elige <strong>Añadir referencia bibliográfica</strong> para copiar una entrada de la biblioteca local a ese archivo.</p>
+          
+          <h3>Etiquetas y autores</h3>
+          
+          <p>En <strong>Etiquetas</strong>, busca por nombre, ordena la lista y añade, edita o elimina etiquetas. Puedes usarlas para clasificar y filtrar registros de la biblioteca.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/reference-tags.webp" alt="Pantalla Gestionar etiquetas con búsqueda, ordenación por nombre y controles para añadir, editar y eliminar etiquetas." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Gestión de etiquetas para organizar referencias.</figcaption>
+          
+          </figure>
+          
+          <p>En <strong>Autores</strong>, busca y ordena por nombre completo o institución. Cada fila muestra cuántas referencias están asociadas al autor; los controles permiten añadir, editar o eliminar autores. Abre los detalles para consultar el nombre completo, el nombre usado en las referencias, ORCID, correo electrónico e institución.</p>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/reference-authors.webp" alt="Pantalla Gestionar autores con búsqueda, ordenación, recuento de referencias y controles para añadir, editar y eliminar autores." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Lista de autores y cantidad de referencias asociadas a cada registro.</figcaption>
+          
+          </figure>
+          
+          <figure class="manual-shot">
+            
+            <img class="manual-shot-image" src="../../manual/screenshots/author-details.webp" alt="Ventana Detalles del autor con el nombre completo, el nombre usado en las referencias, ORCID, correo electrónico, institución y número de referencias." loading="lazy" decoding="async" width="1920" height="996">
+            
+            <figcaption>Datos almacenados en el perfil local de cada autor.</figcaption>
+          
+          </figure>
+        
+        </section>
+
+        
+
+        <section id="dados">
+          
+          <p class="kicker">06 · Datos</p>
+          
+          <h2>Dónde se guardan los archivos y cómo hacer copias</h2>
+          
+          <p>Los documentos y archivos de cada proyecto se guardan en la carpeta elegida al crear o abrir el proyecto. La biblioteca y la configuración de la aplicación se guardan por separado de los archivos del proyecto.</p>
+          
+          <p>En una instalación estándar de Flatpak, los datos locales se guardan en <code>~/.var/app/io.github.diegopn.ovenbird/data/ovenbird/</code>. Esta carpeta contiene la biblioteca <code>library.bib</code> y archivos auxiliares de etiquetas y autores, como <code>tags.json</code>, <code>authors.json</code> y <code>author_profiles.json</code>. La configuración se guarda en <code>~/.var/app/io.github.diegopn.ovenbird/config/ovenbird/settings.json</code>.</p>
+          
+          <p>Para hacer una copia de seguridad completa, cierra Ovenbird y copia toda la carpeta del proyecto, además de las carpetas <code>data/ovenbird/</code> y <code>config/ovenbird/</code> de estas rutas. Para guardar solo una copia portátil de las referencias bibliográficas, usa <strong>Exportar BibTeX</strong> y guarda el archivo .bib en otro lugar.</p>
+          
+          <p>Flatpak usa directorios de datos y configuración propios para cada aplicación. Consulta la <a href="https://docs.flatpak.org/pt-br/latest/conventions.html" target="_blank" rel="noopener noreferrer">documentación de Flatpak sobre los directorios XDG.</a>.</p>
+        
+        </section>
+
+        
+
+        <section id="solucao">
+          
+          <p class="kicker">07 · Solución de problemas</p>
+          
+          <h2>Problemas habituales</h2>
+          
+          <h3>No se puede volver a abrir el último proyecto</h3>
+          
+          <p>Si la carpeta del proyecto se movió o eliminó, Ovenbird no podrá restaurarla al iniciar. Vuelve a abrirla con <strong>Abrir proyecto</strong> o <strong>Ctrl+Alt+O</strong> . También puedes desactivar <strong>Volver a abrir el último proyecto al iniciar</strong> en Preferencias.</p>
+          
+          <h3>El paquete no se instala</h3>
+          
+          <p>Comprueba que Flatpak esté instalado y configurado y que el sistema pueda obtener el runtime GNOME Platform 51 que requiere el paquete. El archivo .flatpak no incluye dependencias, por lo que puede ser necesario descargarlas de una fuente Flatpak configurada.</p>
+          
+          <h3>La compilación indica que no se encontró un motor LaTeX</h3>
+          
+          <p>El paquete publicado incluye Tectonic. Si utilizas una compilación instalada de otra forma, Ovenbird también busca <code>latexmk</code> y <code>pdflatex</code>. La primera compilación con Tectonic puede necesitar descargar archivos de soporte.</p>
+          
+          <h3>El modo Visual no abre el documento</h3>
+          
+          <p>Usa el modo Visual con un archivo .tex que contenga <code>\begin{document}</code> y <code>\end{document}</code>. Para trabajar con macros o estructuras que no están representadas en este modo, vuelve al modo Código.</p>
+          
+          <h3>La bibliografía no se compila o no se inserta una cita</h3>
+          
+          <p>Guarda el documento LaTeX antes de insertar una cita. Si hay errores en la bibliografía, comprueba el mensaje de compilación y si el motor necesario está disponible: los documentos que usan BibTeX necesitan ese soporte; los que usan biblatex pueden necesitar Biber, latexmk o Tectonic.</p>
+          
+          <p>Si el problema continúa, anota el sistema utilizado, el paso que falló y el mensaje que aparece en el <a href="https://github.com/diegopn/ovenbird/issues/new" target="_blank" rel="noopener noreferrer">formulario para informar de problemas del proyecto</a>.</p>
+        
+        </section>
+
+        
+
+        <section id="software-info">
+          
+          <p class="kicker">08 · Información</p>
+          
+          <h2>Ficha del software y del manual</h2>
+          
+          <h3>Software documentado en este manual</h3>
+          
+          <dl class="manual-facts">
+            
+            <div><dt>Nombre</dt><dd>Ovenbird</dd></div>
+            
+            <div><dt>Responsable del software</dt><dd>Diego Pereira do Nascimento</dd></div>
+            
+            <div><dt>Versión documentada</dt><dd>0.2.0</dd></div>
+            
+            <div><dt>Plataforma y paquete</dt><dd>Linux · GNOME Platform 51 · Flatpak x86_64</dd></div>
+            
+            <div><dt>Licencia de la aplicación</dt><dd>GNU GPL versión 3 o posterior (GPL-3.0-or-later)</dd></div>
+            
+            <div><dt>Tecnologías</dt><dd>Rust · GTK 4 · Libadwaita · GtkSourceView</dd></div>
+          
+          </dl>
+          
+          <h3>Autoría y edición del manual</h3>
+          
+          <dl class="manual-facts">
+            
+            <div><dt>Autoría del manual</dt><dd>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></dd></div>
+            
+            <div><dt>Edición del manual</dt><dd>1.ª edición</dd></div>
+            
+            <div><dt>Versión de la aplicación descrita</dt><dd>0.2.0</dd></div>
+            
+            <div><dt>Actualización de esta edición</dt><dd><time datetime="2026-10-21">21 de octubre de 2026</time></dd></div>
+            
+            <div><dt>Primer registro en el repositorio</dt><dd>9 de octubre de 2026</dd></div>
+            
+            <div><dt>Publicación original en el sitio web</dt><dd>No confirmada; el primer registro en el historial del repositorio no demuestra cuándo se publicó la página.</dd></div>
+          
+          </dl>
+          
+          <h3>Enlaces del proyecto</h3>
+          
+          <ul>
+            
+            <li><a href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer">Repositorio de Ovenbird</a></li>
+            
+            <li><a href="https://diegopn.github.io/ovenbird-site/" target="_blank" rel="noopener noreferrer">Sitio del proyecto</a></li>
+            
+            <li><a href="https://github.com/diegopn/ovenbird/issues/new" target="_blank" rel="noopener noreferrer">Informar de un problema</a></li>
+            
+            <li><a href="https://github.com/diegopn/ovenbird/releases/download/v0.2.0/Ovenbird-0.2.0-x86_64.flatpak" target="_blank" rel="noopener noreferrer">Descargar el paquete de la versión 0.2.0</a></li>
+          
+          </ul>
+          
+          <p class="manual-print-note">Para guardar este manual como PDF, usa la opción de impresión del navegador y selecciona «Guardar como PDF».</p>
+        
+        </section>
+
+      
+
+      </article>
+    
+    </div>
+  
+  </main>
+
+  
+
+  <footer class="wrap site-footer">
+    
+    <a class="footer-brand" href="https://github.com/diegopn/ovenbird">
+      
+      <img src="../../assets/images/favicon.svg" alt="">
+      Ovenbird
+    </a>
+    
+    <span>Manual de usuario · Edición 1</span>
+    
+    <a href="#inicio">Volver al inicio ↑</a>
+  
+  </footer>
+
+  
+
+  <script src="../../script.js></script>
+
+</body>
+
+</html>
