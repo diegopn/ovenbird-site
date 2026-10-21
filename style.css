@@ -1043,6 +1043,13 @@ main :focus-visible {
 .manual-shot {
   margin: 22px 0 0;
 }
+.manual-shot .manual-shot-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--body-line);
+  background: var(--body-soft);
+}
 .manual-shot-box {
   display: grid;
   min-height: 150px;

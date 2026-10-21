@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Manual do usuário do Ovenbird: instalação, projetos LaTeX, edição Code e Visual, compilação de PDFs e referências BibTeX.">
   <meta name="author" content="Diego Pereira do Nascimento">
-  <meta name="dcterms.modified" content="2026-10-12">
+  <meta name="dcterms.modified" content="2026-10-21">
   <meta name="theme-color" content="#ffffff">
   <title>Manual do usuário — Ovenbird</title>
   <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/manual/">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=c094aa1b6adc33cc5a1e91dc0b449043c98a047a">
+  <link rel="stylesheet" href="../style.css?v=705b05ce54889df5ab3d33460101a3f4aa27ab30">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,7 +27,7 @@
       "name": "Diego Pereira do Nascimento",
       "sameAs": "https://orcid.org/0009-0008-6487-9890"
     },
-    "dateModified": "2026-10-12",
+    "dateModified": "2026-10-21",
     "about": {
       "@type": "SoftwareApplication",
       "name": "Ovenbird",
@@ -93,7 +93,7 @@
         <p class="manual-meta">
           <span><b>Edição do manual</b>1ª edição</span>
           <span><b>Versão do aplicativo</b>0.2.0</span>
-          <span><b>Atualizado</b><time datetime="2026-10-12">12 de outubro de 2026</time></span>
+          <span><b>Atualizado</b><time datetime="2026-10-21">21 de outubro de 2026</time></span>
           <span class="manual-meta-author"><b>Autoria do manual</b>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></span>
         </p>
       </div>
@@ -142,12 +142,8 @@
           </ol>
           <p>Se o arquivo estiver em outra pasta, substitua o caminho do comando pelo local onde você o salvou. Para abrir pelo terminal após a instalação, use <code>flatpak run io.github.diegopn.ovenbird</code>.</p>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista da instalação do Ovenbird, mostrando o arquivo Flatpak baixado e a confirmação de instalação concluída.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra o arquivo Flatpak baixado e a confirmação de instalação concluída.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Instalação do Ovenbird 0.2.0 pelo pacote Flatpak.</span>
-            </div>
-            <figcaption>Instalação do pacote da versão 0.2.0.</figcaption>
+            <img class="manual-shot-image" src="screenshots/about-v020.png" alt="Janela Sobre do Ovenbird com a versão 0.2.0 e os links do projeto." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Informações do aplicativo após a instalação.</figcaption>
           </figure>
         </section>
 
@@ -168,11 +164,7 @@
           <p>Abra o menu principal do aplicativo e escolha <strong>Preferências (Preferences)</strong>. Em <strong>Abrir ao iniciar</strong>, escolha entre o editor LaTeX e a biblioteca de referências. A opção <strong>Reabrir o último projeto ao iniciar</strong> vem ativada; desative-a se preferir começar sem restaurar o projeto anterior.</p>
           <p>As preferências também permitem escolher o tema <strong>Automático</strong>, <strong>Claro</strong> ou <strong>Escuro</strong> e definir a pasta inicial dos diálogos de arquivos. Por padrão, eles começam em Downloads. Use <strong>Escolher pasta</strong> para selecionar outra pasta ou <strong>Redefinir</strong> para voltar ao padrão.</p>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista da criação de projeto, mostrando a escolha entre documento em branco e os modelos disponíveis.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra a escolha entre documento em branco e os modelos disponíveis antes de selecionar a pasta e o nome.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Janela de criação de projeto do Ovenbird com as opções de documento em branco e modelos.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/new-project.png" alt="Janela Novo projeto com opção em branco e modelos ABNT, IEEE, ACM, Elsevier e Springer Nature." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Escolha do ponto de partida para um projeto.</figcaption>
           </figure>
         </section>
@@ -186,28 +178,16 @@
           <h3>Compilar e ver o PDF</h3>
           <p>Use <strong>Compilar (Compile)</strong> ou o atalho <strong>Ctrl+Shift+R</strong>. O Ovenbird procura <code>latexmk</code>, <code>pdflatex</code> ou Tectonic; a versão Flatpak 0.2.0 inclui Tectonic. Após uma compilação bem-sucedida, o PDF aparece na área de visualização. Consulte o status da compilação para identificar mensagens de erro.</p>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista do modo Código, mostrando a lista de arquivos do projeto, o código LaTeX e a ação de compilação.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra a lista de arquivos, o código LaTeX e a ação de compilação na barra superior.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Editor do Ovenbird em modo Código com projeto LaTeX aberto.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/code-editor.png" alt="Editor do Ovenbird no modo Código, com arquivos do projeto à esquerda e o documento LaTeX aberto." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Edição de um documento no modo Código (Code).</figcaption>
           </figure>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista do modo Visual, mostrando uma página formatada com elementos reconhecidos pelo editor.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra o mesmo documento com títulos, parágrafos e elementos de formatação representados visualmente.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Editor do Ovenbird em modo Visual com um documento LaTeX aberto.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/visual-editor.png" alt="Editor do Ovenbird no modo Visual, exibindo o conteúdo formatado do documento LaTeX." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Edição visual do mesmo documento LaTeX.</figcaption>
           </figure>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista da compilação, mostrando o PDF gerado na área de visualização ao lado do documento.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra o PDF gerado ao lado do documento após uma compilação bem-sucedida.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Documento LaTeX compilado e aberto na visualização de PDF do Ovenbird.</span>
-            </div>
-            <figcaption>Documento compilado e visualização do PDF.</figcaption>
+            <img class="manual-shot-image" src="screenshots/compiled-pdf.png" alt="Editor do Ovenbird com um arquivo BibTeX do projeto à esquerda e o PDF compilado à direita." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Arquivo BibTeX do projeto e PDF compilado na visualização.</figcaption>
           </figure>
         </section>
 
@@ -223,27 +203,15 @@
           </ul>
           <p>A biblioteca local é independente dos arquivos de cada projeto. Para que uma citação por chave seja encontrada na compilação, a entrada correspondente precisa estar em um arquivo .bib do projeto declarado no documento principal com <code>\bibliography{...}</code> ou <code>\addbibresource{...}</code>. A biblioteca local, por si só, não é incluída automaticamente na compilação. Você pode abrir um arquivo .bib do projeto e usar <strong>Adicionar referência bibliográfica (Add bibliographic reference)</strong> para copiar uma entrada da biblioteca local para esse arquivo.</p>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista da biblioteca local, mostrando a lista de referências, busca, filtros e ação para adicionar uma referência.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra a lista local, o campo de busca, os filtros e a ação para adicionar referência.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Biblioteca local de referências BibTeX do Ovenbird.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/reference-library.png" alt="Biblioteca local do Ovenbird com lista de referências, busca, filtros e botão para adicionar referência." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Busca e organização da biblioteca de referências.</figcaption>
           </figure>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista do formulário de referência, mostrando campos bibliográficos e a chave BibTeX.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra os campos bibliográficos principais e a chave que identifica a referência no BibTeX.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Formulário do Ovenbird para cadastrar uma referência bibliográfica.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/add-reference.png" alt="Formulário do Ovenbird para incluir uma referência bibliográfica, com campos para tipo, chave, título, autores e dados da publicação." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Cadastro de uma referência bibliográfica.</figcaption>
           </figure>
           <figure class="manual-shot">
-            <div class="manual-shot-box manual-shot-placeholder" role="img" aria-label="Captura prevista das ações BibTeX, mostrando onde importar um arquivo .bib e exportar a biblioteca local.">
-              <span class="manual-shot-label">Espaço reservado para captura de tela</span>
-              <span class="manual-shot-description">Mostra os comandos de importação de um arquivo .bib e exportação da biblioteca local.</span>
-              <span class="manual-shot-alt">Texto alternativo previsto: Menu da biblioteca do Ovenbird com as ações Importar BibTeX e Exportar BibTeX.</span>
-            </div>
+            <img class="manual-shot-image" src="screenshots/bibtex-import-export.png" alt="Menu da biblioteca local do Ovenbird com as ações Importar BibTeX e Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Importação e exportação da biblioteca.</figcaption>
           </figure>
         </section>
@@ -290,7 +258,7 @@
             <div><dt>Autoria do manual</dt><dd>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></dd></div>
             <div><dt>Edição do manual</dt><dd>1ª edição</dd></div>
             <div><dt>Versão do aplicativo descrita</dt><dd>0.2.0</dd></div>
-            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-12">12 de outubro de 2026</time></dd></div>
+            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-21">21 de outubro de 2026</time></dd></div>
             <div><dt>Primeiro registro no repositório</dt><dd>9 de outubro de 2026</dd></div>
             <div><dt>Publicação original no site</dt><dd>Data não confirmada; o primeiro registro no histórico do repositório não comprova quando a página foi publicada.</dd></div>
           </dl>
