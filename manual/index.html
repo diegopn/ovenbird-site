@@ -164,7 +164,7 @@
           <p>Abra o menu principal do aplicativo e escolha <strong>Preferências (Preferences)</strong>. Em <strong>Abrir ao iniciar</strong>, escolha entre o editor LaTeX e a biblioteca de referências. A opção <strong>Reabrir o último projeto ao iniciar</strong> vem ativada; desative-a se preferir começar sem restaurar o projeto anterior.</p>
           <p>As preferências também permitem escolher o tema <strong>Automático</strong>, <strong>Claro</strong> ou <strong>Escuro</strong> e definir a pasta inicial dos diálogos de arquivos. Por padrão, eles começam em Downloads. Use <strong>Escolher pasta</strong> para selecionar outra pasta ou <strong>Redefinir</strong> para voltar ao padrão.</p>
           <figure class="manual-shot">
-            <img class="manual-shot-image" src="screenshots/new-project.png" alt="Janela Novo projeto com opção em branco e modelos ABNT, IEEE, ACM, Elsevier e Springer Nature." loading="lazy" decoding="async" width="1920" height="996">
+            <img class="manual-shot-image" src="screenshots/new-project.webp" alt="Janela Novo projeto com opção em branco e modelos ABNT, IEEE, ACM, Elsevier e Springer Nature." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Escolha do ponto de partida para um projeto.</figcaption>
           </figure>
         </section>
@@ -172,47 +172,77 @@
         <section id="edicao">
           <p class="kicker">04 · Edição</p>
           <h2>Edite e compile seu documento</h2>
-          <p>Abra um arquivo .tex pela lista de arquivos do projeto. Os modos <strong>Código (Code)</strong> e <strong>Visual</strong> trabalham sobre o mesmo documento. Use <strong>Ctrl+S</strong> para salvar e <strong>Ctrl+F</strong> para localizar texto no documento.</p>
-          <p>O modo Visual reconhece um subconjunto dos comandos e ambientes LaTeX. Trechos que não são representados visualmente permanecem disponíveis como código-fonte; volte ao modo Código para editá-los diretamente. Para entrar no modo Visual, o documento precisa conter <code>\begin{document}</code> e <code>\end{document}</code>.</p>
-          <p>As ferramentas do editor incluem inserção e formatação de elementos como listas, tabelas, equações, imagens, links, notas e citações. A disponibilidade da representação Visual depende do elemento e da estrutura LaTeX usada.</p>
-          <h3>Compilar e ver o PDF</h3>
-          <p>Use <strong>Compilar (Compile)</strong> ou o atalho <strong>Ctrl+Shift+R</strong>. O Ovenbird procura <code>latexmk</code>, <code>pdflatex</code> ou Tectonic; a versão Flatpak 0.2.0 inclui Tectonic. Após uma compilação bem-sucedida, o PDF aparece na área de visualização. Consulte o status da compilação para identificar mensagens de erro.</p>
+          <p>Abra um arquivo <code>.tex</code> ou <code>.bib</code> pela lista de arquivos do projeto. Use <strong>Ctrl+S</strong> para salvar e <strong>Ctrl+F</strong> para localizar texto no arquivo aberto.</p>
+          <h3>Arquivos .tex: modos Code e Visual</h3>
+          <p>O modo <strong>Código (Code)</strong> edita a fonte LaTeX; o modo <strong>Visual</strong> apresenta uma edição formatada do mesmo documento. Para abrir o modo Visual, o arquivo precisa conter <code>\begin{document}</code> e <code>\end{document}</code>. O modo Visual trabalha com um subconjunto dos comandos e ambientes LaTeX implementados pelo aplicativo.</p>
+          <p>Se um trecho não aparecer no modo Visual, volte ao modo Código para revisar e editar a fonte. O modo Código também é o lugar para trabalhar diretamente com comandos LaTeX que não tenham representação visual.</p>
+          <p>No editor LaTeX, a barra oferece desfazer e refazer, estilos de parágrafo, negrito, itálico, sublinhado, monoespaçado e inserção de links. Os menus incluem matemática, símbolos, listas e recuos, além de citação. Em <strong>Mais opções</strong>, ficam inserir imagem ou tabela, comentário LaTeX, nota de rodapé, nota de revisão, rótulo e referência cruzada.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/editor-options.webp" alt="Menu Mais opções do editor LaTeX aberto, mostrando inserir imagem, tabela, comentário LaTeX, nota de rodapé, nota de revisão, rótulo e referência cruzada." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Ferramentas disponíveis no menu Mais opções do editor.</figcaption>
+          </figure>
           <figure class="manual-shot">
             <img class="manual-shot-image" src="screenshots/code-editor.png" alt="Editor do Ovenbird no modo Código, com arquivos do projeto à esquerda e o documento LaTeX aberto." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Edição de um documento no modo Código (Code).</figcaption>
+            <figcaption>Edição da fonte LaTeX no modo Código (Code).</figcaption>
           </figure>
           <figure class="manual-shot">
             <img class="manual-shot-image" src="screenshots/visual-editor.png" alt="Editor do Ovenbird no modo Visual, exibindo o conteúdo formatado do documento LaTeX." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Edição visual do mesmo documento LaTeX.</figcaption>
           </figure>
+          <h3>Arquivos .bib: edição BibTeX</h3>
+          <p>Um arquivo <code>.bib</code> do projeto é editado diretamente como texto BibTeX; ele não oferece o modo Visual. Com um arquivo <code>.bib</code> aberto, a ação <strong>Adicionar referência bibliográfica (Add bibliographic reference)</strong> permite pesquisar a biblioteca local e inserir a entrada escolhida no arquivo aberto. Assim, você pode manter no projeto as entradas que o documento LaTeX usa.</p>
           <figure class="manual-shot">
-            <img class="manual-shot-image" src="screenshots/compiled-pdf.png" alt="Editor do Ovenbird com um arquivo BibTeX do projeto à esquerda e o PDF compilado à direita." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Arquivo BibTeX do projeto e PDF compilado na visualização.</figcaption>
+            <img class="manual-shot-image" src="screenshots/bib-entry-picker.webp" alt="Editor com um arquivo BibTeX aberto e a janela Adicionar referência bibliográfica, com busca e entradas da biblioteca local." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Escolha uma entrada da biblioteca local para inserir no arquivo .bib aberto.</figcaption>
+          </figure>
+          <h3>Compilar e ver o PDF</h3>
+          <p>Use <strong>Compilar (Compile)</strong> ou o atalho <strong>Ctrl+Shift+R</strong>. O Ovenbird procura <code>latexmk</code>, <code>pdflatex</code> ou Tectonic; a versão Flatpak 0.2.0 inclui Tectonic. Após uma compilação bem-sucedida, o PDF aparece na área de visualização. Consulte o status da compilação para identificar mensagens de erro.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/compiled-pdf.webp" alt="Editor do Ovenbird com um arquivo BibTeX do projeto aberto à esquerda e a prévia do PDF compilado à direita." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Arquivo BibTeX do projeto e PDF compilado na área de visualização.</figcaption>
           </figure>
         </section>
 
         <section id="biblioteca">
           <p class="kicker">05 · Referências</p>
           <h2>Organize a biblioteca BibTeX</h2>
-          <p>Abra <strong>Referências (References)</strong> na navegação lateral para acessar a biblioteca local. Use <strong>Adicionar referência (Add reference)</strong> para cadastrar uma obra e preencher seus dados bibliográficos. A busca e os filtros permitem localizar registros por autor, ano, etiqueta ou tipo. Na versão 0.2.0, as listas de referências, etiquetas e autores também foram ajustadas para navegar melhor por bibliotecas grandes.</p>
-          <h3>Importar, exportar e citar</h3>
-          <ul>
-            <li><strong>Importar BibTeX (Import BibTeX):</strong> selecione um arquivo .bib; as referências importadas passam a fazer parte da biblioteca local.</li>
-            <li><strong>Exportar BibTeX (Export BibTeX):</strong> escolha onde salvar uma cópia .bib das referências da biblioteca.</li>
-            <li><strong>Inserir citação (Insert citation):</strong> abra e salve um documento LaTeX, depois use essa ação ou <strong>Ctrl+Shift+C</strong> para escolher uma referência da biblioteca. A opção <strong>Citação</strong> insere a chave BibTeX no documento; a opção <strong>Referência bibliográfica</strong> insere uma referência formatada no próprio documento.</li>
-          </ul>
-          <p>A biblioteca local é independente dos arquivos de cada projeto. Para que uma citação por chave seja encontrada na compilação, a entrada correspondente precisa estar em um arquivo .bib do projeto declarado no documento principal com <code>\bibliography{...}</code> ou <code>\addbibresource{...}</code>. A biblioteca local, por si só, não é incluída automaticamente na compilação. Você pode abrir um arquivo .bib do projeto e usar <strong>Adicionar referência bibliográfica (Add bibliographic reference)</strong> para copiar uma entrada da biblioteca local para esse arquivo.</p>
+          <p>Abra <strong>Referências (References)</strong> na navegação lateral para acessar a biblioteca local. Na lista, pesquise os registros e filtre por autor, ano, tag ou tipo. Você também pode ordenar por título, autor, ano ou tag, em ordem crescente ou decrescente.</p>
           <figure class="manual-shot">
             <img class="manual-shot-image" src="screenshots/reference-library.png" alt="Biblioteca local do Ovenbird com lista de referências, busca, filtros e botão para adicionar referência." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Busca e organização da biblioteca de referências.</figcaption>
+            <figcaption>Busca, filtros e lista da biblioteca local.</figcaption>
+          </figure>
+          <h3>Adicionar e manter referências</h3>
+          <p>Use <strong>Adicionar referência (Add reference)</strong> para escolher o tipo de registro e preencher a chave de citação, o título, os autores e a data. Os campos variam conforme o tipo; para um artigo de periódico, por exemplo, o formulário também mostra periódico, volume, número ou edição, páginas, mês, DOI, URL e observação. Depois de salvar, os registros podem ser editados ou removidos pela lista.</p>
+          <p>As referências podem receber tags. Ao criar ou editar um registro, selecione tags existentes ou crie novas; depois, use o filtro de tags na lista para encontrar os registros correspondentes.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/add-reference.webp" alt="Formulário Nova referência com tipo, chave de citação, título, autores e campos bibliográficos de um artigo." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Cadastro de referência; os campos disponíveis dependem do tipo escolhido.</figcaption>
+          </figure>
+          <h3>Importar, exportar e inserir citações</h3>
+          <ul>
+            <li><strong>Importar BibTeX (Import BibTeX):</strong> selecione um arquivo <code>.bib</code>; as referências importadas passam a fazer parte da biblioteca local.</li>
+            <li><strong>Exportar BibTeX (Export BibTeX):</strong> salve uma cópia <code>.bib</code> das referências da biblioteca.</li>
+            <li><strong>Inserir citação (Insert citation):</strong> em um documento LaTeX salvo, use a ação ou <strong>Ctrl+Shift+C</strong> para pesquisar a biblioteca. <strong>Citação</strong> insere a chave BibTeX no documento; <strong>Referência bibliográfica</strong> insere uma referência formatada.</li>
+          </ul>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/bibtex-import-export.webp" alt="Menu da biblioteca local do Ovenbird com as ações Importar BibTeX e Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Importação e exportação da biblioteca local.</figcaption>
+          </figure>
+          <p>A biblioteca local é independente dos arquivos de cada projeto. Para que uma citação por chave seja encontrada na compilação, a entrada correspondente precisa estar em um arquivo <code>.bib</code> do projeto declarado no documento principal com <code>\bibliography{...}</code> ou <code>\addbibresource{...}</code>. A biblioteca local, por si só, não é incluída automaticamente na compilação. Em um arquivo <code>.bib</code> do projeto aberto no editor, use <strong>Adicionar referência bibliográfica</strong> para copiar uma entrada da biblioteca local para esse arquivo.</p>
+          <h3>Tags e autores</h3>
+          <p>Em <strong>Tags</strong>, pesquise pelo nome, ordene a lista e adicione, edite ou remova tags. Elas podem ser usadas para classificar e filtrar registros na biblioteca.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/reference-tags.webp" alt="Tela Gerenciar tags com busca, ordenação por nome e controles para adicionar, editar e remover tags." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Gerenciamento de tags usadas para organizar referências.</figcaption>
+          </figure>
+          <p>Em <strong>Autores</strong>, pesquise e ordene por nome completo ou instituição. Cada linha mostra quantas referências estão associadas ao autor; os controles permitem cadastrar, editar ou remover registros de autor. Abra os detalhes para consultar o nome completo, o nome usado nas referências, ORCID, e-mail e instituição.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/reference-authors.webp" alt="Tela Gerenciar autores com busca, ordenação, contagem de referências e controles para adicionar, editar e remover autores." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Lista de autores e quantidade de referências associadas a cada registro.</figcaption>
           </figure>
           <figure class="manual-shot">
-            <img class="manual-shot-image" src="screenshots/add-reference.png" alt="Formulário do Ovenbird para incluir uma referência bibliográfica, com campos para tipo, chave, título, autores e dados da publicação." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Cadastro de uma referência bibliográfica.</figcaption>
-          </figure>
-          <figure class="manual-shot">
-            <img class="manual-shot-image" src="screenshots/bibtex-import-export.png" alt="Menu da biblioteca local do Ovenbird com as ações Importar BibTeX e Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Importação e exportação da biblioteca.</figcaption>
+            <img class="manual-shot-image" src="screenshots/author-details.webp" alt="Janela Detalhes do autor com nome completo, nome usado nas referências, ORCID, e-mail, instituição e quantidade de referências." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Dados mantidos no perfil local de cada autor.</figcaption>
           </figure>
         </section>
 
