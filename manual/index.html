@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Manual do usuário do Ovenbird: instalação, projetos LaTeX, edição Code e Visual, compilação de PDFs e referências BibTeX.">
   <meta name="author" content="Diego Pereira do Nascimento">
-  <meta name="dcterms.modified" content="2026-10-21">
+  <meta name="dcterms.modified" content="2026-10-23">
   <meta name="theme-color" content="#ffffff">
   <title>Manual do usuário — Ovenbird</title>
   <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/manual/">
@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css?v=705b05ce54889df5ab3d33460101a3f4aa27ab30">
+  <link rel="stylesheet" href="../style.css?v=manual-exchange-20261023">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -27,7 +27,7 @@
       "name": "Diego Pereira do Nascimento",
       "sameAs": "https://orcid.org/0009-0008-6487-9890"
     },
-    "dateModified": "2026-10-21",
+    "dateModified": "2026-10-23",
     "about": {
       "@type": "SoftwareApplication",
       "name": "Ovenbird",
@@ -58,7 +58,7 @@
       <a href="../#download">Download</a>
       <a href="../#recursos">Recursos</a>
       <a href="../#fluxo">Como funciona</a>
-      <a href="./" aria-current="page">Manual do usuário</a>
+      <a href="./" aria-current="page">Manual</a>
     </nav>
 
     <div class="header-actions">
@@ -93,7 +93,7 @@
         <p class="manual-meta">
           <span><b>Edição do manual</b>1ª edição</span>
           <span><b>Versão do aplicativo</b>0.3.0</span>
-          <span><b>Atualizado</b><time datetime="2026-10-21">21 de outubro de 2026</time></span>
+          <span><b>Atualizado</b><time datetime="2026-10-23">23 de outubro de 2026</time></span>
           <span class="manual-meta-author"><b>Autoria do manual</b>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></span>
         </p>
       </div>
@@ -108,6 +108,7 @@
           <li><a href="#projeto">Primeira abertura e projetos</a></li>
           <li><a href="#edicao">Editar e compilar</a></li>
           <li><a href="#biblioteca">Referências BibTeX</a></li>
+          <li><a href="#importar-exportar">Importar e exportar referências</a></li>
           <li><a href="#dados">Dados e cópias de segurança</a></li>
           <li><a href="#solucao">Problemas comuns</a></li>
           <li><a href="#software-info">Ficha do software</a></li>
@@ -218,17 +219,12 @@
             <img class="manual-shot-image" src="screenshots/add-reference.webp" alt="Formulário Nova referência com tipo, chave de citação, título, autores e campos bibliográficos de um artigo." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Cadastro de referência; os campos disponíveis dependem do tipo escolhido.</figcaption>
           </figure>
-          <h3>Importar, exportar e inserir citações</h3>
+          <h3>Inserir citações</h3>
           <ul>
-            <li><strong>Importar BibTeX (Import BibTeX):</strong> selecione um arquivo <code>.bib</code>; as referências importadas passam a fazer parte da biblioteca local.</li>
-            <li><strong>Exportar BibTeX (Export BibTeX):</strong> salve uma cópia <code>.bib</code> das referências da biblioteca.</li>
             <li><strong>Inserir citação (Insert citation):</strong> em um documento LaTeX salvo, use a ação ou <strong>Ctrl+Shift+C</strong> para pesquisar a biblioteca. <strong>Citação</strong> insere a chave BibTeX no documento; <strong>Referência bibliográfica</strong> insere uma referência formatada.</li>
           </ul>
-          <figure class="manual-shot">
-            <img class="manual-shot-image" src="screenshots/bibtex-import-export.webp" alt="Menu da biblioteca local do Ovenbird com as ações Importar BibTeX e Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
-            <figcaption>Importação e exportação da biblioteca local.</figcaption>
-          </figure>
           <p>A biblioteca local é independente dos arquivos de cada projeto. Para que uma citação por chave seja encontrada na compilação, a entrada correspondente precisa estar em um arquivo <code>.bib</code> do projeto declarado no documento principal com <code>\bibliography{...}</code> ou <code>\addbibresource{...}</code>. A biblioteca local, por si só, não é incluída automaticamente na compilação. Em um arquivo <code>.bib</code> do projeto aberto no editor, use <strong>Adicionar referência bibliográfica</strong> para copiar uma entrada da biblioteca local para esse arquivo.</p>
+
           <h3>Tags e autores</h3>
           <p>Em <strong>Tags</strong>, pesquise pelo nome, ordene a lista e adicione, edite ou remova tags. Elas podem ser usadas para classificar e filtrar registros na biblioteca.</p>
           <figure class="manual-shot">
@@ -246,17 +242,46 @@
           </figure>
         </section>
 
+        <section id="importar-exportar">
+          <p class="kicker">06 · Transferência</p>
+          <h2>Importar e exportar referências</h2>
+          <p>O intercâmbio é manual, por arquivo. Nesta etapa, o Ovenbird aceita somente BibTeX (.bib); não há conexão de contas nem sincronização automática. O arquivo transfere dados bibliográficos e alguns campos podem ser mapeados de forma diferente. PDFs e outros anexos, notas e coleções não têm transferência garantida. Referências com chaves de citação duplicadas são ignoradas na importação e os registros existentes não são atualizados.</p>
+          <h3>Importar no Ovenbird</h3>
+          <p>Exporte a biblioteca, uma coleção ou as referências selecionadas na plataforma de origem para um arquivo <strong>BibTeX (.bib)</strong>. Em seguida, no Ovenbird, abra <strong>Referências → Importar referências → BibTeX (.bib)</strong> e selecione o arquivo.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="screenshots/bibtex-import-export.webp" alt="Captura de uma versão anterior da biblioteca local, com o menu de importação e exportação BibTeX aberto." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Captura anterior: hoje, use Importar referências ou Exportar referências e escolha BibTeX (.bib) no modal.</figcaption>
+          </figure>
+          <h4 id="intercambio-zotero">Zotero</h4>
+          <p><strong>Da plataforma para o Ovenbird:</strong> Para exportar a biblioteca inteira, use <strong>File → Export Library…</strong> ou a ação equivalente no menu de contexto da biblioteca. Para uma coleção, clique com o botão direito nela e escolha <strong>Export Collection…</strong>; para itens selecionados, clique com o botão direito na seleção e escolha <strong>Export Items…</strong>. Escolha BibTeX e salve o arquivo .bib.</p>
+          <p><small>Fontes oficiais: <a href="https://www.zotero.org/support/kb/importing_standardized_formats" target="_blank" rel="noopener noreferrer">importar formatos padronizados</a> · <a href="https://www.zotero.org/support/kb/exporting" target="_blank" rel="noopener noreferrer">exportar dados</a> · <a href="https://www.zotero.org/support/kb/field_mappings" target="_blank" rel="noopener noreferrer">mapeamento de campos</a>.</small></p>
+          <h4 id="intercambio-jabref">JabRef</h4>
+          <p><strong>Da plataforma para o Ovenbird:</strong> O JabRef trabalha diretamente com bibliotecas BibTeX. Salve ou copie o arquivo de biblioteca .bib que deseja transferir e selecione-o no importador do Ovenbird.</p>
+          <p><small>Fonte oficial: <a href="https://docs.jabref.org/v5/cite/bibtex-and-biblatex" target="_blank" rel="noopener noreferrer">BibTeX e BibLaTeX no JabRef</a>.</small></p>
+          <h4 id="intercambio-mendeley">Mendeley Reference Manager</h4>
+          <p><strong>Da plataforma para o Ovenbird:</strong> Selecione as referências no Mendeley Reference Manager, escolha <strong>Export</strong> no painel de ações, selecione BibTeX (.bib) e salve o arquivo.</p>
+          <p><small>Fontes oficiais: <a href="https://www.elsevier.support/mendeley/answer/how-can-i-add-new-references-to-my-library-in-mendeley-reference-manager" target="_blank" rel="noopener noreferrer">importar referências</a> · <a href="https://www.elsevier.support/mendeley/answer/how-can-i-export-my-library" target="_blank" rel="noopener noreferrer">exportar a biblioteca</a>.</small></p>
+          <h3>Exportar do Ovenbird</h3>
+          <p>No Ovenbird, abra <strong>Referências → Exportar referências → BibTeX (.bib)</strong> e salve o arquivo. Depois, importe ou abra esse arquivo na plataforma de destino seguindo os passos abaixo.</p>
+          <h4>Zotero</h4>
+          <p><strong>Do Ovenbird para Zotero:</strong> No Zotero, use <strong>File → Import… → A file</strong> e escolha o arquivo .bib exportado pelo Ovenbird. Os nomes podem aparecer traduzidos conforme o idioma da interface.</p>
+          <h4>JabRef</h4>
+          <p><strong>Do Ovenbird para JabRef:</strong> Abra o arquivo .bib exportado pelo Ovenbird diretamente no JabRef como uma biblioteca BibTeX.</p>
+          <h4>Mendeley Reference Manager</h4>
+          <p><strong>Do Ovenbird para Mendeley Reference Manager:</strong> No Mendeley Reference Manager, use <strong>Add New → Import Library</strong>, escolha BibTeX e abra o arquivo .bib exportado pelo Ovenbird.</p>
+        </section>
+
         <section id="dados">
-          <p class="kicker">06 · Dados</p>
+          <p class="kicker">07 · Dados</p>
           <h2>Onde ficam os arquivos e como fazer cópias</h2>
           <p>Os documentos e arquivos de cada projeto ficam na pasta escolhida quando o projeto é criado ou aberto. A biblioteca e as configurações do aplicativo ficam separadas dos arquivos do projeto.</p>
           <p>Na instalação Flatpak padrão, os dados locais ficam sob <code>~/.var/app/io.github.diegopn.ovenbird/data/ovenbird/</code>. Essa pasta contém a biblioteca <code>library.bib</code> e arquivos auxiliares de etiquetas e autores, como <code>tags.json</code>, <code>authors.json</code> e <code>author_profiles.json</code>. As configurações ficam em <code>~/.var/app/io.github.diegopn.ovenbird/config/ovenbird/settings.json</code>.</p>
-          <p>Para uma cópia de segurança completa, feche o Ovenbird e copie a pasta inteira do projeto, além das pastas <code>data/ovenbird/</code> e <code>config/ovenbird/</code> desses caminhos. Para guardar apenas uma cópia portátil das referências bibliográficas, use <strong>Exportar BibTeX</strong> e salve o arquivo .bib em outro local.</p>
+          <p>Para uma cópia de segurança completa, feche o Ovenbird e copie a pasta inteira do projeto, além das pastas <code>data/ovenbird/</code> e <code>config/ovenbird/</code> desses caminhos. Para guardar apenas uma cópia portátil das referências bibliográficas, use <strong>Exportar referências</strong> e salve o arquivo .bib em outro local.</p>
           <p>O Flatpak usa diretórios de dados e configuração próprios para cada aplicativo. Veja a <a href="https://docs.flatpak.org/pt-br/latest/conventions.html" target="_blank" rel="noopener noreferrer">documentação sobre os diretórios XDG no Flatpak</a>.</p>
         </section>
 
         <section id="solucao">
-          <p class="kicker">07 · Solução de problemas</p>
+          <p class="kicker">08 · Solução de problemas</p>
           <h2>Problemas comuns</h2>
           <h3>O último projeto não pode ser reaberto</h3>
           <p>Se a pasta do projeto foi movida ou removida, o Ovenbird não consegue restaurá-la ao iniciar. Abra a pasta novamente com <strong>Abrir projeto</strong> ou <strong>Ctrl+Alt+O</strong>. Você também pode desativar <strong>Reabrir o último projeto ao iniciar</strong> em Preferências.</p>
@@ -272,7 +297,7 @@
         </section>
 
         <section id="software-info">
-          <p class="kicker">08 · Identificação</p>
+          <p class="kicker">09 · Identificação</p>
           <h2>Ficha do software e deste manual</h2>
           <h3>Software documentado</h3>
           <dl class="manual-facts">
@@ -288,7 +313,7 @@
             <div><dt>Autoria do manual</dt><dd>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></dd></div>
             <div><dt>Edição do manual</dt><dd>1ª edição</dd></div>
             <div><dt>Versão do aplicativo descrita</dt><dd>0.3.0</dd></div>
-            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-21">21 de outubro de 2026</time></dd></div>
+            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-23">23 de outubro de 2026</time></dd></div>
             <div><dt>Primeiro registro no repositório</dt><dd>9 de outubro de 2026</dd></div>
             <div><dt>Publicação original no site</dt><dd>Data não confirmada; o primeiro registro no histórico do repositório não comprova quando a página foi publicada.</dd></div>
           </dl>

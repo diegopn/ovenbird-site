@@ -12,7 +12,7 @@
   
   <meta name="author" content="Diego Pereira do Nascimento">
   
-  <meta name="dcterms.modified" content="2026-10-21">
+  <meta name="dcterms.modified" content="2026-10-23">
   <meta name="dcterms.issued" content="2026-10-21">
   
   <meta name="theme-color" content="#ffffff">
@@ -34,7 +34,7 @@
   
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="../../style.css?v=705b05ce54889df5ab3d33460101a3f4aa27ab30">
+  <link rel="stylesheet" href="../../style.css?v=manual-exchange-20261023">
   
   <script type="application/ld+json">
   {
@@ -49,7 +49,7 @@
       "sameAs": "https://orcid.org/0009-0008-6487-9890"
     },
     "datePublished": "2026-10-21",
-    "dateModified": "2026-10-21",
+    "dateModified": "2026-10-23",
     "about": {
       "@type": "SoftwareApplication",
       "name": "Ovenbird",
@@ -97,7 +97,7 @@
       
       <a href="../../es/#flujo">Cómo funciona</a>
       
-      <a href="./" aria-current="page">Manual de usuario</a>
+      <a href="./" aria-current="page">Manual</a>
     
     </nav>
 
@@ -167,8 +167,8 @@
           
           <span><b>Versión de la aplicación</b>0.3.0</span>
           
-          <span><b>Actualizado</b><time datetime="2026-10-21">21 de octubre de 2026</time></span>
-          <span><b>Publicado por primera vez</b><time datetime="2026-10-21">21 de octubre de 2026</time></span>
+          <span><b>Actualizado</b><time datetime="2026-10-23">23 de octubre de 2026</time></span>
+          <span><b>Publicado por primera vez</b><time datetime="2026-10-23">23 de octubre de 2026</time></span>
           
           <span class="manual-meta-author"><b>Autoría del manual</b>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></span>
         
@@ -197,6 +197,7 @@
           <li><a href="#edicao">Editar y compilar</a></li>
           
           <li><a href="#biblioteca">Referencias BibTeX</a></li>
+          <li><a href="#importar-exportar">Importar y exportar referencias</a></li>
           
           <li><a href="#dados">Datos y copias de seguridad</a></li>
           
@@ -418,26 +419,10 @@
           
           </figure>
           
-          <h3>Importar, exportar e insertar citas</h3>
-          
+          <h3>Insertar citas</h3>
           <ul>
-            
-            <li><strong>Importar BibTeX (Import BibTeX):</strong> selecciona un archivo <code>.bib</code>; las referencias importadas pasan a formar parte de la biblioteca local.</li>
-            
-            <li><strong>Exportar BibTeX (Export BibTeX):</strong> guarda una copia <code>.bib</code> de las referencias de la biblioteca.</li>
-            
             <li><strong>Insertar cita (Insert citation):</strong> en un documento LaTeX guardado, usa la acción o pulsa <strong>Ctrl+Shift+C</strong> para buscar en la biblioteca. <strong>Cita</strong> inserta la clave BibTeX en el documento; <strong>Referencia bibliográfica</strong> inserta una referencia con formato.</li>
-          
           </ul>
-          
-          <figure class="manual-shot">
-            
-            <img class="manual-shot-image" src="../../manual/screenshots/bibtex-import-export.webp" alt="Menú de la biblioteca local de Ovenbird con las acciones Importar BibTeX y Exportar BibTeX." loading="lazy" decoding="async" width="1920" height="996">
-            
-            <figcaption>Importación y exportación de la biblioteca local.</figcaption>
-          
-          </figure>
-          
           <p>La biblioteca local es independiente de los archivos de cada proyecto. Para que una cita por clave se encuentre al compilar, la entrada correspondiente debe estar en un archivo <code>.bib</code> del proyecto declarado en el documento principal mediante <code>\bibliography{...}</code> o <code>\addbibresource{...}</code>. La biblioteca local no se incluye automáticamente al compilar. En un archivo <code>.bib</code> del proyecto abierto en el editor, elige <strong>Añadir referencia bibliográfica</strong> para copiar una entrada de la biblioteca local a ese archivo.</p>
           
           <h3>Etiquetas y autores</h3>
@@ -474,9 +459,38 @@
 
         
 
+        <section id="importar-exportar">
+          <p class="kicker">06 · Intercambio</p>
+          <h2>Importar y exportar referencias</h2>
+          <p>El intercambio es manual y se realiza mediante un archivo. En este flujo, Ovenbird solo admite BibTeX (.bib); no hay conexión de cuentas ni sincronización automática. El formato transfiere datos bibliográficos y algunos campos pueden mapearse de forma diferente. No se garantiza la transferencia de PDF u otros adjuntos, notas ni colecciones. Al importar, Ovenbird omite las referencias cuyas claves de cita ya existen y no actualiza esos registros.</p>
+          <h3>Importar a Ovenbird</h3>
+          <p>Exporta la biblioteca, una colección o las referencias seleccionadas en la plataforma de origen como un archivo <strong>BibTeX (.bib)</strong>. Después, en Ovenbird, abre <strong>Referencias → Importar referencias → BibTeX (.bib)</strong> y selecciona el archivo.</p>
+          <figure class="manual-shot">
+            <img class="manual-shot-image" src="../../manual/screenshots/bibtex-import-export.webp" alt="Captura de una versión anterior de la biblioteca local, con el menú de importación y exportación BibTeX abierto." loading="lazy" decoding="async" width="1920" height="996">
+            <figcaption>Captura anterior: ahora las acciones se llaman Importar referencias y Exportar referencias; BibTeX (.bib) se elige en el diálogo.</figcaption>
+          </figure>
+          <h4 id="intercambio-zotero">Zotero</h4>
+          <p><strong>De la plataforma a Ovenbird:</strong> Para exportar toda la biblioteca, usa <strong>File → Export Library…</strong> o la acción equivalente en el menú contextual de la biblioteca. Para una colección, haz clic derecho y elige <strong>Export Collection…</strong>; para los elementos seleccionados, haz clic derecho en la selección y elige <strong>Export Items…</strong>. Elige BibTeX y guarda el archivo .bib.</p>
+          <p><small>Fuentes oficiales: <a href="https://www.zotero.org/support/kb/importing_standardized_formats" target="_blank" rel="noopener noreferrer">importar formatos estandarizados</a> · <a href="https://www.zotero.org/support/kb/exporting" target="_blank" rel="noopener noreferrer">exportar datos</a> · <a href="https://www.zotero.org/support/kb/field_mappings" target="_blank" rel="noopener noreferrer">mapeo de campos</a>.</small></p>
+          <h4 id="intercambio-jabref">JabRef</h4>
+          <p><strong>De la plataforma a Ovenbird:</strong> JabRef trabaja directamente con bibliotecas BibTeX. Guarda o copia el archivo de biblioteca .bib que quieras transferir y selecciónalo en el importador de Ovenbird.</p>
+          <p><small>Fuente oficial: <a href="https://docs.jabref.org/v5/cite/bibtex-and-biblatex" target="_blank" rel="noopener noreferrer">BibTeX y BibLaTeX en JabRef</a>.</small></p>
+          <h4 id="intercambio-mendeley">Mendeley Reference Manager</h4>
+          <p><strong>De la plataforma a Ovenbird:</strong> Selecciona las referencias en Mendeley Reference Manager, elige <strong>Export</strong> en el panel de acciones, selecciona BibTeX (.bib) y guarda el archivo.</p>
+          <p><small>Fuentes oficiales: <a href="https://www.elsevier.support/mendeley/answer/how-can-i-add-new-references-to-my-library-in-mendeley-reference-manager" target="_blank" rel="noopener noreferrer">importar referencias</a> · <a href="https://www.elsevier.support/mendeley/answer/how-can-i-export-my-library" target="_blank" rel="noopener noreferrer">exportar la biblioteca</a>.</small></p>
+          <h3>Exportar desde Ovenbird</h3>
+          <p>En Ovenbird, abre <strong>Referencias → Exportar referencias → BibTeX (.bib)</strong> y guarda el archivo. Después, impórtalo o ábrelo en la plataforma de destino siguiendo los pasos que se indican a continuación.</p>
+          <h4>Zotero</h4>
+          <p><strong>De Ovenbird a Zotero:</strong> En Zotero, usa <strong>File → Import… → A file</strong> y elige el archivo .bib exportado desde Ovenbird. Los nombres del menú pueden aparecer traducidos según el idioma de la interfaz.</p>
+          <h4>JabRef</h4>
+          <p><strong>De Ovenbird a JabRef:</strong> Abre directamente en JabRef el archivo .bib exportado desde Ovenbird como una biblioteca BibTeX.</p>
+          <h4>Mendeley Reference Manager</h4>
+          <p><strong>De Ovenbird a Mendeley Reference Manager:</strong> En Mendeley Reference Manager, elige <strong>Add New → Import Library</strong>, selecciona BibTeX y abre el archivo .bib exportado desde Ovenbird.</p>
+        </section>
+
         <section id="dados">
           
-          <p class="kicker">06 · Datos</p>
+          <p class="kicker">07 · Datos</p>
           
           <h2>Dónde se guardan los archivos y cómo hacer copias</h2>
           
@@ -484,7 +498,7 @@
           
           <p>En una instalación estándar de Flatpak, los datos locales se guardan en <code>~/.var/app/io.github.diegopn.ovenbird/data/ovenbird/</code>. Esta carpeta contiene la biblioteca <code>library.bib</code> y archivos auxiliares de etiquetas y autores, como <code>tags.json</code>, <code>authors.json</code> y <code>author_profiles.json</code>. La configuración se guarda en <code>~/.var/app/io.github.diegopn.ovenbird/config/ovenbird/settings.json</code>.</p>
           
-          <p>Para hacer una copia de seguridad completa, cierra Ovenbird y copia toda la carpeta del proyecto, además de las carpetas <code>data/ovenbird/</code> y <code>config/ovenbird/</code> de estas rutas. Para guardar solo una copia portátil de las referencias bibliográficas, usa <strong>Exportar BibTeX</strong> y guarda el archivo .bib en otro lugar.</p>
+          <p>Para hacer una copia de seguridad completa, cierra Ovenbird y copia toda la carpeta del proyecto, además de las carpetas <code>data/ovenbird/</code> y <code>config/ovenbird/</code> de estas rutas. Para guardar solo una copia portátil de las referencias bibliográficas, usa <strong>Exportar referencias</strong> y guarda el archivo .bib en otro lugar.</p>
           
           <p>Flatpak usa directorios de datos y configuración propios para cada aplicación. Consulta la <a href="https://docs.flatpak.org/en/latest/conventions.html" target="_blank" rel="noopener noreferrer">documentación de Flatpak sobre los directorios XDG.</a>.</p>
         
@@ -494,7 +508,7 @@
 
         <section id="solucao">
           
-          <p class="kicker">07 · Solución de problemas</p>
+          <p class="kicker">08 · Solución de problemas</p>
           
           <h2>Problemas habituales</h2>
           
@@ -526,7 +540,7 @@
 
         <section id="software-info">
           
-          <p class="kicker">08 · Información</p>
+          <p class="kicker">09 · Información</p>
           
           <h2>Ficha del software y del manual</h2>
           
