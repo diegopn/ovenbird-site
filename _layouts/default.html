@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/src/style.css' | relative_url }}">
   <script>
     try {
       const theme = localStorage.getItem("ovenbird-theme");
@@ -27,7 +27,7 @@
     {{ content }}
     {% include footer.html %}
   </div>
-  <script src="{{ '/script.js' | relative_url }}"></script>
+  <script src="{{ '/src/script.js' | relative_url }}"></script>
   {% include google-analytics.html %}
 </body>
 </html>

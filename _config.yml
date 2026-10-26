@@ -17,5 +17,3 @@ languages:
   - code: "pt-BR"
   - code: "en"
   - code: "es"
-exclude:
-  - docs
