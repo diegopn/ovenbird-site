@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Manual do usuário do Ovenbird: instalação, projetos LaTeX, edição Code e Visual, compilação de PDFs e referências BibTeX.">
   <meta name="author" content="Diego Pereira do Nascimento">
-  <meta name="dcterms.modified" content="2026-10-23">
+  <meta name="dcterms.modified" content="2026-10-26">
   <meta name="theme-color" content="#ffffff">
   <title>Manual do usuário — Ovenbird</title>
   <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/manual/">
@@ -27,11 +27,11 @@
       "name": "Diego Pereira do Nascimento",
       "sameAs": "https://orcid.org/0009-0008-6487-9890"
     },
-    "dateModified": "2026-10-23",
+    "dateModified": "2026-10-26",
     "about": {
       "@type": "SoftwareApplication",
       "name": "Ovenbird",
-      "softwareVersion": "0.3.0"
+      "softwareVersion": "0.4.0"
     }
   }
   </script>
@@ -89,11 +89,11 @@
       <div class="wrap">
         <p class="kicker">Manual do usuário · edição 1</p>
         <h1>Manual do Ovenbird</h1>
-        <p class="manual-intro">Este guia explica os principais fluxos do Ovenbird documentados na versão 0.3.0: instalar o aplicativo, trabalhar em projetos LaTeX, compilar documentos, organizar referências BibTeX e configurar a abertura do aplicativo.</p>
+        <p class="manual-intro">Este guia explica os principais fluxos do Ovenbird documentados na versão 0.4.0: instalar o aplicativo, trabalhar em projetos LaTeX, compilar documentos, organizar referências BibTeX e configurar a abertura do aplicativo.</p>
         <p class="manual-meta">
           <span><b>Edição do manual</b>1ª edição</span>
-          <span><b>Versão do aplicativo</b>0.3.0</span>
-          <span><b>Atualizado</b><time datetime="2026-10-23">23 de outubro de 2026</time></span>
+          <span><b>Versão do aplicativo</b>0.4.0</span>
+          <span><b>Atualizado</b><time datetime="2026-10-26">26 de outubro de 2026</time></span>
           <span class="manual-meta-author"><b>Autoria do manual</b>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></span>
         </p>
       </div>
@@ -129,15 +129,15 @@
           <ul>
             <li>O arquivo publicado é um pacote Flatpak para Linux x86_64.</li>
             <li>É necessário ter Flatpak instalado e configurado. O pacote usa o runtime <code>org.gnome.Platform</code> versão 51; o arquivo de instalação não inclui esse runtime e o Flatpak pode precisar obtê-lo de uma origem configurada no sistema.</li>
-            <li>A versão Flatpak 0.3.0 inclui Tectonic para compilar documentos. A primeira compilação pode precisar baixar arquivos de suporte do mecanismo LaTeX.</li>
+            <li>A versão Flatpak 0.4.0 inclui Tectonic para compilar documentos. A primeira compilação pode precisar baixar arquivos de suporte do mecanismo LaTeX.</li>
           </ul>
           <p>Se o Flatpak ainda não estiver configurado, consulte as <a href="https://flatpak.org/setup" target="_blank" rel="noopener noreferrer">instruções para preparar o sistema</a>. A <a href="https://docs.flatpak.org/en/latest/single-file-bundles.html" target="_blank" rel="noopener noreferrer">documentação oficial sobre pacotes Flatpak de arquivo único</a> explica a instalação direta e informa que esse tipo de pacote não inclui suas dependências.</p>
-          <p class="manual-download"><a class="button" href="https://github.com/diegopn/ovenbird/releases/download/v0.3.0/Ovenbird-0.3.0-x86_64.flatpak">Baixar Ovenbird 0.3.0 para Linux x86_64</a></p>
+          <p class="manual-download"><a class="button" href="https://github.com/diegopn/ovenbird/releases/download/v0.4.0/Ovenbird-0.4.0-x86_64.flatpak">Baixar Ovenbird 0.4.0 para Linux x86_64</a></p>
           <ol>
-            <li>Baixe o arquivo <strong>Ovenbird-0.3.0-x86_64.flatpak</strong>.</li>
+            <li>Baixe o arquivo <strong>Ovenbird-0.4.0-x86_64.flatpak</strong>.</li>
             <li>Se ele estiver na pasta Downloads, abra um terminal e execute:</li>
           </ol>
-          <pre class="manual-code"><code>flatpak install --user "$HOME/Downloads/Ovenbird-0.3.0-x86_64.flatpak"</code></pre>
+          <pre class="manual-code"><code>flatpak install --user "$HOME/Downloads/Ovenbird-0.4.0-x86_64.flatpak"</code></pre>
           <ol start="3">
             <li>Confirme a instalação quando solicitado. Depois, abra Ovenbird pelo menu de aplicativos do sistema.</li>
           </ol>
@@ -197,7 +197,7 @@
             <figcaption>Escolha uma entrada da biblioteca local para inserir no arquivo .bib aberto.</figcaption>
           </figure>
           <h3>Compilar e ver o PDF</h3>
-          <p>Use <strong>Compilar (Compile)</strong> ou o atalho <strong>Ctrl+Shift+R</strong>. O Ovenbird procura <code>latexmk</code>, <code>pdflatex</code> ou Tectonic; a versão Flatpak 0.3.0 inclui Tectonic. Após uma compilação bem-sucedida, o PDF aparece na área de visualização. Consulte o status da compilação para identificar mensagens de erro.</p>
+          <p>Use <strong>Compilar (Compile)</strong> ou o atalho <strong>Ctrl+Shift+R</strong>. O Ovenbird procura <code>latexmk</code>, <code>pdflatex</code> ou Tectonic; a versão Flatpak 0.4.0 inclui Tectonic. Após uma compilação bem-sucedida, o PDF aparece na área de visualização. Consulte o status da compilação para identificar mensagens de erro.</p>
           <figure class="manual-shot">
             <img class="manual-shot-image" src="screenshots/compiled-pdf.webp" alt="Editor do Ovenbird com um arquivo BibTeX do projeto aberto à esquerda e a prévia do PDF compilado à direita." loading="lazy" decoding="async" width="1920" height="996">
             <figcaption>Arquivo BibTeX do projeto e PDF compilado na área de visualização.</figcaption>
@@ -303,7 +303,7 @@
           <dl class="manual-facts">
             <div><dt>Nome</dt><dd>Ovenbird</dd></div>
             <div><dt>Desenvolvedor do software</dt><dd>Diego Pereira do Nascimento</dd></div>
-            <div><dt>Versão documentada</dt><dd>0.3.0</dd></div>
+            <div><dt>Versão documentada</dt><dd>0.4.0</dd></div>
             <div><dt>Plataforma e pacote</dt><dd>Linux · GNOME Platform 51 · Flatpak x86_64</dd></div>
             <div><dt>Licença do aplicativo</dt><dd>GNU GPL versão 3 ou posterior (GPL-3.0-or-later)</dd></div>
             <div><dt>Tecnologias</dt><dd>Rust · GTK 4 · Libadwaita · GtkSourceView</dd></div>
@@ -312,8 +312,8 @@
           <dl class="manual-facts">
             <div><dt>Autoria do manual</dt><dd>Diego Pereira do Nascimento · <a href="https://orcid.org/0009-0008-6487-9890" target="_blank" rel="noopener noreferrer">ORCID 0009-0008-6487-9890</a></dd></div>
             <div><dt>Edição do manual</dt><dd>1ª edição</dd></div>
-            <div><dt>Versão do aplicativo descrita</dt><dd>0.3.0</dd></div>
-            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-23">23 de outubro de 2026</time></dd></div>
+            <div><dt>Versão do aplicativo descrita</dt><dd>0.4.0</dd></div>
+            <div><dt>Atualização desta edição</dt><dd><time datetime="2026-10-26">26 de outubro de 2026</time></dd></div>
             <div><dt>Primeiro registro no repositório</dt><dd>9 de outubro de 2026</dd></div>
             <div><dt>Publicação original no site</dt><dd>Data não confirmada; o primeiro registro no histórico do repositório não comprova quando a página foi publicada.</dd></div>
           </dl>
@@ -322,7 +322,7 @@
             <li><a href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer">Repositório do Ovenbird</a></li>
             <li><a href="https://diegopn.github.io/ovenbird-site/" target="_blank" rel="noopener noreferrer">Site do projeto</a></li>
             <li><a href="https://github.com/diegopn/ovenbird/issues/new" target="_blank" rel="noopener noreferrer">Relatar um problema</a></li>
-            <li><a href="https://github.com/diegopn/ovenbird/releases/download/v0.3.0/Ovenbird-0.3.0-x86_64.flatpak" target="_blank" rel="noopener noreferrer">Baixar o pacote da versão 0.3.0</a></li>
+            <li><a href="https://github.com/diegopn/ovenbird/releases/download/v0.4.0/Ovenbird-0.4.0-x86_64.flatpak" target="_blank" rel="noopener noreferrer">Baixar o pacote da versão 0.4.0</a></li>
           </ul>
           <p class="manual-print-note">Para salvar este manual em PDF, use a opção de impressão do navegador e escolha “Salvar como PDF”.</p>
         </section>
