@@ -1,72 +1,34 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ovenbird, a native LaTeX editor for GNOME with a local BibTeX library.">
-  <meta name="theme-color" content="#ffffff">
-  <title>Ovenbird — LaTeX writing on GNOME</title>
-  <link rel="canonical" href="https://diegopn.github.io/ovenbird-site/en/">
-  <link rel="alternate" hreflang="pt-BR" href="https://diegopn.github.io/ovenbird-site/">
-  <link rel="alternate" hreflang="en" href="https://diegopn.github.io/ovenbird-site/en/">
-  <link rel="alternate" hreflang="es" href="https://diegopn.github.io/ovenbird-site/es/">
-  <link rel="alternate" hreflang="x-default" href="https://diegopn.github.io/ovenbird-site/">
-  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
-  <link rel="icon" href="../assets/images/favicon-512.png" type="image/png" sizes="512x512">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-  <script>
-    try {
-      const theme = localStorage.getItem("ovenbird-theme");
-      if (theme === "dark" || theme === "light") {
-        document.documentElement.dataset.theme = theme;
-      }
-    } catch {}
-  </script>
-</head>
-<body>
-  <header class="site-header">
-    <a class="brand" href="#home" aria-label="Back to the Ovenbird homepage">
-      <span class="brand-mark"><img src="../assets/images/favicon.svg" alt=""></span>
-      <span class="brand-copy">
-        <strong>Ovenbird</strong>
-        <small>LaTeX editor and bibliography manager</small>
-      </span>
-    </a>
-
-    <nav class="main-nav" id="main-nav" aria-label="Main navigation">
-      <a href="#download">Download</a>
-      <a href="#features">Features</a>
-      <a href="#flow">How it works</a>
-      <a href="manual/">Manual</a>
-    </nav>
-
-    <div class="header-actions">
-      <a class="github-link" href="https://github.com/diegopn/ovenbird" target="_blank" rel="noopener noreferrer" aria-label="Ovenbird on GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.4 7.85 10.93.58.1.79-.25.79-.56v-2.16c-3.19.69-3.87-1.35-3.87-1.35-.53-1.34-1.3-1.7-1.3-1.7-1.06-.73.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.74-1.56-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.2-3.1-.12-.3-.52-1.47.11-3.06 0 0 .98-.31 3.2 1.18a11.1 11.1 0 0 1 5.83 0c2.22-1.5 3.2-1.18 3.2-1.18.63 1.59.23 2.76.11 3.06.75.81 1.2 1.84 1.2 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.14v3.18c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
-      </a>
-
-      <div class="language-switcher" role="group" aria-label="Language">
-        <a class="language-option" href="../" lang="pt-BR">PT</a>
-        <a class="language-option is-active" href="./" lang="en" aria-current="page">EN</a>
-        <a class="language-option" href="../es/" lang="es">ES</a>
-      </div>
-
-      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
-        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.9 13.1A8.5 8.5 0 0 1 10.9 3.1 8.5 8.5 0 1 0 20.9 13.1Z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-      </button>
-
-      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-        <span class="sr-only">Open menu</span>
-      </button>
-    </div>
-  </header>
-
-  <main>
+---
+layout: default
+lang: "en"
+page_kind: "home"
+permalink: "/en/"
+title: "Ovenbird — LaTeX writing on GNOME"
+description: "Ovenbird, a native LaTeX editor for GNOME with a local BibTeX library."
+software_description: "Native LaTeX editor for GNOME with a local BibTeX library."
+image: "/assets/images/ovenbird-latex-editor.png"
+image_alt: "Ovenbird LaTeX editor"
+home_path: "/en/"
+manual_path: "/en/manual/"
+features_anchor: "features"
+workflow_anchor: "flow"
+translations:
+  pt: "/"
+  en: "/en/"
+  es: "/es/"
+navigation:
+  download: "Download"
+  features: "Features"
+  how: "How it works"
+  manual: "Manual"
+  language: "Language"
+  theme: "Toggle theme"
+  menu: "Open menu"
+  home: "Back to the Ovenbird homepage"
+footer_summary: "Native LaTeX editor for GNOME · Version 0.4.0"
+footer_top: "Back to the top ↑"
+---
+<main>
     <section class="hero" id="home">
       <div class="wrap hero-grid">
         <div>
@@ -193,16 +155,3 @@
       </div>
     </section>
   </main>
-
-  <footer class="wrap site-footer">
-    <a class="footer-brand" href="https://github.com/diegopn/ovenbird">
-      <img src="../assets/images/favicon.svg" alt="">
-      Ovenbird
-    </a>
-    <span>Native LaTeX editor for GNOME · Version 0.4.0</span>
-    <a href="#home">Back to top ↑</a>
-  </footer>
-
-  <script src="../script.js"></script>
-</body>
-</html>

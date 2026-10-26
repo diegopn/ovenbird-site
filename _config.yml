@@ -1,0 +1,21 @@
+title: Ovenbird
+name: Ovenbird
+description: Editor LaTeX nativo para GNOME com biblioteca BibTeX local.
+url: "https://diegopn.github.io"
+baseurl: "/ovenbird-site"
+permalink: pretty
+markdown: kramdown
+app_version: "0.4.0"
+google_analytics: "G-3RP4FSYR3K"
+app_download_url: "https://github.com/diegopn/ovenbird/releases/download/v0.4.0/Ovenbird-0.4.0-x86_64.flatpak"
+app_operating_system: Linux
+manual_author:
+  name: "Diego Pereira do Nascimento"
+  url: "https://diegopn.github.io/"
+  orcid: "https://orcid.org/0009-0008-6487-9890"
+languages:
+  - code: "pt-BR"
+  - code: "en"
+  - code: "es"
+exclude:
+  - docs

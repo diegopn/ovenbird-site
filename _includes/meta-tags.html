@@ -1,0 +1,39 @@
+{%- assign meta_title = page.meta_title | default: page.title -%}
+{%- assign canonical_url = page.url | absolute_url -%}
+{%- assign meta_description = page.description | strip_html | normalize_whitespace | truncate: 320 -%}
+{%- assign social_locale = page.lang | replace: "-", "_" -%}
+{%- assign social_image = page.image | default: "/assets/images/ovenbird-latex-editor.png" | absolute_url -%}
+{%- assign social_image_alt = page.image_alt | default: site.name -%}
+{%- assign social_type = "website" -%}
+{%- if page.page_kind == "manual" -%}
+  {%- assign social_type = "article" -%}
+{%- endif -%}
+<title>{{ meta_title | escape }}</title>
+<meta name="description" content="{{ meta_description | escape }}">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="{{ canonical_url | escape }}">
+<link rel="alternate" hreflang="pt-BR" href="{{ page.translations.pt | absolute_url }}">
+<link rel="alternate" hreflang="en" href="{{ page.translations.en | absolute_url }}">
+<link rel="alternate" hreflang="es" href="{{ page.translations.es | absolute_url }}">
+<link rel="alternate" hreflang="x-default" href="{{ page.translations.pt | absolute_url }}">
+<meta property="og:locale" content="{{ social_locale | escape }}">
+<meta property="og:type" content="{{ social_type }}">
+<meta property="og:title" content="{{ meta_title | escape }}">
+<meta property="og:description" content="{{ meta_description | escape }}">
+<meta property="og:url" content="{{ canonical_url | escape }}">
+<meta property="og:site_name" content="{{ site.name | escape }}">
+<meta property="og:image" content="{{ social_image | escape }}">
+<meta property="og:image:alt" content="{{ social_image_alt | escape }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ meta_title | escape }}">
+<meta name="twitter:description" content="{{ meta_description | escape }}">
+<meta name="twitter:image" content="{{ social_image | escape }}">
+<meta name="twitter:image:alt" content="{{ social_image_alt | escape }}">
+{% if page.page_kind == "manual" -%}
+<meta name="author" content="{{ site.manual_author.name | escape }}">
+<meta name="dcterms.modified" content="{{ page.modified_at | escape }}">
+{% if page.published_at %}<meta name="dcterms.issued" content="{{ page.published_at | escape }}">{% endif %}
+<meta property="article:modified_time" content="{{ page.modified_at | date_to_xmlschema }}">
+{% if page.published_at %}<meta property="article:published_time" content="{{ page.published_at | date_to_xmlschema }}">{% endif %}
+<meta property="article:author" content="{{ site.manual_author.url | escape }}">
+{% endif %}
