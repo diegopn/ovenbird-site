@@ -20,7 +20,7 @@ Site de apresentação do [Ovenbird](https://github.com/diegopn/ovenbird), edito
 - _includes/: cabeçalho, rodapé, metadados, dados estruturados e Google Analytics compartilhados.
 - index.html, en/ e es/: conteúdo localizado, com metadados próprios no front matter.
 - manual/, en/manual/ e es/manual/: manuais localizados, publicados nas rotas atuais.
-- assets/ e manual/screenshots/: imagens do site e capturas usadas pelo manual.
+- src/assets/ e manual/screenshots/: imagens do site e capturas usadas pelo manual.
 - src/style.css e src/script.js: apresentação e interações compartilhadas.
 
 ## GitHub Pages e prévia local

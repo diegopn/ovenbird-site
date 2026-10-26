@@ -4,11 +4,11 @@
   --hero: #f8f9f9;
   --soft: #f3f6f8;
   --ink: #111111;
-  --muted: #66727a;
-  --copy: #455054;
+  --muted: #111111;
+  --copy: #111111;
   --line: #e1e6e9;
   --accent: var(--body-accent);
-  --accent-contrast: #ffffff;
+  --accent-contrast: #111111;
   --body-accent: #557a69;
   --body-accent-hover: #456252;
   --body-hero: #f6f8f5;
@@ -17,7 +17,7 @@
   --header: rgba(255, 255, 255, .97);
   --contact: #e8efe8;
   --button: var(--body-accent);
-  --button-text: #ffffff;
+  --button-text: #111111;
   --sans: Montserrat, Arial, sans-serif;
   --serif: Amiri, Georgia, serif;
   --max: 1300px;
@@ -28,21 +28,21 @@
   --page: #101416;
   --hero: #171c1f;
   --soft: #141b1f;
-  --ink: #f2f1ec;
-  --muted: #aeb7ba;
-  --copy: #c7ced0;
+  --ink: #FFFFFF;
+  --muted: #FFFFFF;
+  --copy: #FFFFFF;
   --line: #2d383d;
-  --accent: var(--body-accent);
-  --accent-contrast: #101416;
+  --accent: #456252;
+  --accent-contrast: #FFFFFF;
   --body-accent: #a8bdb0;
-  --body-accent-hover: #bfd1c3;
+  --body-accent-hover: #557a69;
   --body-hero: #131916;
   --body-soft: #1a231d;
   --body-line: #37473b;
   --header: rgba(16, 20, 22, .97);
   --contact: #202c24;
-  --button: var(--body-accent);
-  --button-text: #101416;
+  --button: var(--accent);
+  --button-text: #FFFFFF;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,21 +51,21 @@
     --page: #101416;
     --hero: #171c1f;
     --soft: #141b1f;
-    --ink: #f2f1ec;
-    --muted: #aeb7ba;
-    --copy: #c7ced0;
+    --ink: #FFFFFF;
+    --muted: #FFFFFF;
+    --copy: #FFFFFF;
     --line: #2d383d;
-    --accent: var(--body-accent);
-    --accent-contrast: #101416;
+    --accent: #456252;
+    --accent-contrast: #FFFFFF;
     --body-accent: #a8bdb0;
-    --body-accent-hover: #bfd1c3;
+    --body-accent-hover: #557a69;
     --body-hero: #131916;
     --body-soft: #1a231d;
     --body-line: #37473b;
     --header: rgba(16, 20, 22, .97);
     --contact: #202c24;
-    --button: var(--body-accent);
-    --button-text: #101416;
+    --button: var(--accent);
+    --button-text: #FFFFFF;
   }
 }
 
@@ -210,7 +210,7 @@ h2 {
 }
 
 .main-nav a:hover {
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .main-nav a:hover::after {
@@ -386,7 +386,6 @@ h1 {
 
 .button:disabled {
   cursor: not-allowed;
-  opacity: .65;
 }
 
 .download-button {
@@ -401,13 +400,13 @@ h1 {
 }
 
 .license-link {
-  color: var(--body-accent);
+  color: var(--ink);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .download-setup-link {
-  color: var(--body-accent);
+  color: var(--ink);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -489,7 +488,7 @@ h1 {
 
 .kicker {
   margin-bottom: 20px;
-  color: var(--body-accent);
+  color: var(--ink);
 }
 
 .section h2,
@@ -513,7 +512,7 @@ h1 {
 
 .rows article > b,
 .principles article > b {
-  color: var(--body-accent);
+  color: var(--ink);
   font-size: 12px;
 }
 
@@ -692,7 +691,7 @@ h1 {
 }
 
 main :focus-visible {
-  outline-color: var(--body-accent);
+  outline-color: var(--ink);
 }
 
 @media (max-width: 980px) {
@@ -989,7 +988,7 @@ main :focus-visible {
   font-size: 12px;
 }
 .manual-toc a:hover {
-  color: var(--body-accent);
+  color: var(--ink);
 }
 .manual-content > section {
   padding: 0 0 36px;
@@ -1027,7 +1026,7 @@ main :focus-visible {
   padding-left: 22px;
 }
 .manual-content a:not(.button) {
-  color: var(--body-accent);
+  color: var(--ink);
   font-weight: 700;
   text-decoration: underline;
   text-underline-offset: 3px;
