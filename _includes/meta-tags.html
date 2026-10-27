@@ -2,7 +2,7 @@
 {%- assign canonical_url = page.url | absolute_url -%}
 {%- assign meta_description = page.description | strip_html | normalize_whitespace | truncate: 320 -%}
 {%- assign social_locale = page.lang | replace: "-", "_" -%}
-{%- assign social_image = page.image | default: "/src/assets/images/ovenbird-latex-editor.png" | absolute_url -%}
+{%- assign social_image = page.image | default: "/manual/screenshots/code-editor.png" | absolute_url -%}
 {%- assign social_image_alt = page.image_alt | default: site.name -%}
 {%- assign social_type = "website" -%}
 {%- if page.page_kind == "manual" -%}
