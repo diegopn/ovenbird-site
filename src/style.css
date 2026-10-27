@@ -399,12 +399,6 @@ h1 {
   margin-top: 50px;
 }
 
-.license-link {
-  color: var(--ink);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
-
 .download-setup-link {
   color: var(--ink);
   font-weight: 700;
