@@ -8,7 +8,7 @@
   --copy: #111111;
   --line: #e1e6e9;
   --accent: var(--body-accent);
-  --accent-contrast: #111111;
+  --accent-contrast: #FFFFFF;
   --body-accent: #557a69;
   --body-accent-hover: #456252;
   --body-hero: #f6f8f5;
@@ -17,7 +17,7 @@
   --header: rgba(255, 255, 255, .97);
   --contact: #e8efe8;
   --button: var(--body-accent);
-  --button-text: #111111;
+  --button-text: #FFFFFF;
   --sans: Montserrat, Arial, sans-serif;
   --serif: Amiri, Georgia, serif;
   --max: 1300px;
